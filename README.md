@@ -1,4 +1,8 @@
-## Hi there 👋
+## Kat Keilty
+Professional Portfolio
+
+View in [Github Pages](https://katkeilty.github.io) or directly on [Github](https://github.com/KatKeilty/katkeilty.github.io)
+
 
 ![profile logo](https://github.com/KatKeilty/katkeilty.github.io/blob/main/docs/assets/images/logo_kk.png)
 

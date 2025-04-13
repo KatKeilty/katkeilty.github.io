@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+![profile logo](https://github.com/KatKeilty/katkeilty.github.io/blob/main/docs/assets/images/logo_kk.png)
+
 <!--
 **KatKeilty/KatKeilty** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

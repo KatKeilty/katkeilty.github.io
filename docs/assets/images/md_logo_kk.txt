@@ -1,1 +1,0 @@
-![Logo of a directional compass with needle made of dual mathmatical compass](./docs/assets/images/logo_kk.png)

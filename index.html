@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kat Keilty Professional Portfolio</title>
-    <link id="theme-style" rel="stylesheet" href="assets/css/light_style.css">
+    <title>Kat Keilty's Homepage</title>
+    <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/light_style.css">
     <style>
         /* Styling for buttons */
         #toggle-theme, #toggle-language, #linkedin-button {
@@ -40,9 +40,9 @@
 </head>
 <body>
     <header>
-        <img src="assets/images/logo.png" alt="Logo" width="150">
+        <img src="{{ site.baseurl }}/assets/images/logo_kk.png" alt="Logo" width="150">
         <button id="toggle-theme">
-            <img id="theme-icon" src="assets/images/light-icon.png" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
+            <img id="theme-icon" src="https://via.placeholder.com/20" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
         </button>
         <button id="toggle-language">Français</button>
         <h1 style="font-family: 'Copperplate';">Kat Keilty</h1>
@@ -60,7 +60,7 @@
         </p>
         <footer>
             <a href="https://www.linkedin.com/in/kat-k-363351204" id="linkedin-button" target="_blank">
-                <img src="assets/images/linkedin-icon.png" alt="LinkedIn Icon" width="20"> LinkedIn
+                <img src="https://via.placeholder.com/20" alt="LinkedIn Icon" width="20"> LinkedIn
             </a>
         </footer>
     </main>
@@ -77,12 +77,12 @@
 
         // Toggle Light/Dark Theme
         toggleTheme.addEventListener('click', () => {
-            if (themeStyle.getAttribute('href') === 'assets/css/light_style.css') {
-                themeStyle.setAttribute('href', 'assets/css/dark_style.css');
-                themeIcon.setAttribute('src', 'assets/images/dark-icon.png'); // Update icon
+            if (themeStyle.getAttribute('href') === '{{ site.baseurl }}/assets/css/light_style.css') {
+                themeStyle.setAttribute('href', '{{ site.baseurl }}/assets/css/dark_style.css');
+                themeIcon.setAttribute('src', 'https://via.placeholder.com/20/dark'); // Update icon
             } else {
-                themeStyle.setAttribute('href', 'assets/css/light_style.css');
-                themeIcon.setAttribute('src', 'assets/images/light-icon.png'); // Update icon
+                themeStyle.setAttribute('href', '{{ site.baseurl }}/assets/css/light_style.css');
+                themeIcon.setAttribute('src', 'https://via.placeholder.com/20/light'); // Update icon
             }
         });
 

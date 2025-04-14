@@ -1,57 +1,96 @@
----
----
-
-@import "{{ site.theme }}";
-
+/* General Body Styling */
 body {
-    background: #f7f9fc;
-    background: linear-gradient(nulldeg, rgba(247, 249, 252, 1) 0%, rgba(227, 230, 232, 1) 100%);
-      }
-      
-      h1 {
-        color: black;
-        text-align: center;
-        font-family: copperplate, sans-serif;
-      }
-      
-        h2 {
-        color: black;
-        text-align: center;
-        font-family: arial, sans-serif;
-      }
-      
-      p {
-          color: black;
-        font-family: helvetica, sans-serif;
-        font-size: 20px;
-    
-        border: .5 px grey;
-        border-radius: 15px;
-        background: #dedfe0;
-        background: linear-gradient(nulldeg, rgba(222, 223, 224, 1) 0%, rgba(202, 203, 204, 1) 100%);
-        padding: 20px;
-        }
+  background: #fdfdfd;
+  background: radial-gradient(circle, rgba(253, 253, 253, 1) 0%, rgba(240, 240, 240, 1) 25%, rgba(220, 220, 220, 1) 50%, rgba(240, 240, 240, 1) 75%, rgba(253, 253, 253, 1) 99%);
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
 
-        @media only screen and (max-width: 600px) {
-            .item1 {grid-area: 1 / span 6;}
-            .item2 {grid-area: 2 / span 6;}
-            .item3 {grid-area: 3 / span 6;}
-            .item4 {grid-area: 4 / span 6;}
-            .item5 {grid-area: 5 / span 6;}
-          }
-          
-          @media only screen and (min-width: 600px) {
-            .item1 {grid-area: 1 / span 6;}
-            .item2 {grid-area: 2 / span 1;}
-            .item3 {grid-area: 2 / span 4;}
-            .item4 {grid-area: 3 / span 6;}
-            .item5 {grid-area: 4 / span 6;}
-          }
-          
-          @media only screen and (min-width: 768px) {
-            .item1 {grid-area: 1 / span 6;}
-            .item2 {grid-area: 2 / span 1;}
-            .item3 {grid-area: 2 / span 4;}
-            .item4 {grid-area: 2 / span 1;}
-            .item5 {grid-area: 3 / span 6;}
-          }
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #cccccc;
+}
+
+header img {
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: #333333;
+  font-family: Copperplate, Georgia, serif;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #555555;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Paragraph Styling */
+p {
+  color: #333333;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  border: 0.5px solid #cccccc;
+  border-radius: 15px;
+  background: #f9f9f9;
+  background: radial-gradient(circle, rgba(249, 249, 249, 1) 0%, rgba(240, 240, 240, 1) 25%, rgba(230, 230, 230, 1) 50%, rgba(240, 240, 240, 1) 75%, rgba(249, 249, 249, 1) 99%);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: justify;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #555555;
+  border-top: 2px solid #cccccc;
+}
+
+/* Button Styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  h1, h2 {
+      font-size: 1.5em;
+  }
+  p {
+      font-size: 18px;
+      width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+      font-size: 3em;
+  }
+  h2 {
+      font-size: 2.5em;
+  }
+}

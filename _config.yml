@@ -46,7 +46,6 @@ baseurl             : "" # does not include hostname
 show_dir_listing    : false
 
 # Outputting
-theme: jekyll-theme-minimal
 title: Kat's homepage
 description: Bookmark this to keep an eye on my project updates!
 permalink           : date

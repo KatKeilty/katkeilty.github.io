@@ -1,31 +1,72 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="assets/css/dark_style.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Example</title>
+    <link id="theme-style" rel="stylesheet" href="assets/css/light_style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="Logo" width="150">
+        <button id="toggle-theme" style="cursor: pointer;">
+            <img src="assets/images/light-icon.png" alt="Toggle Theme" width="30">
+        </button>
+        <button id="toggle-language" style="cursor: pointer;">Français</button>
+        <h1 style="font-family: 'Copperplate';">Kat Keilty</h1>
+    </header>
+    <main>
+        <h2 id="tagline" style="font-family: 'Arial';">Driving process excellence through data-driven insights</h2>
+        <p id="intro" style="font-family: 'Helvetica';">
+            Welcome to my personal portfolio—a showcase of my journey as a determined and resourceful professional, bringing together versatile interdisciplinary expertise and a passion for tackling challenges with creativity and ingenuity.
+        </p>
+        <p id="skills" style="font-family: 'Helvetica';">
+            Guided by robust critical and systems thinking, I excel in crafting innovative strategies and embracing a comprehensive approach to organizational change management. My work reflects a commitment to not only achieving excellence but also inspiring growth and continuous improvement in every endeavor.
+        </p>
+        <p id="mission" style="font-family: 'Helvetica';">
+            With a respectful, enthusiastic, and engaging demeanor, I aim to create meaningful connections and leave a positive impact. Here, you’ll find examples of my projects, achievements, and the innovative mindset that drives my work. Let’s explore the possibilities together!
+        </p>
+        <footer>
+            <a href="https://www.linkedin.com/in/kat-k-363351204" target="_blank">
+                <img src="assets/images/linkedin-icon.png" alt="LinkedIn" width="30"> LinkedIn
+            </a>
+        </footer>
+    </main>
+    <script>
+        const toggleTheme = document.getElementById('toggle-theme');
+        const themeStyle = document.getElementById('theme-style');
+        const toggleLanguage = document.getElementById('toggle-language');
 
-      <body>
+        const tagline = document.getElementById('tagline');
+        const intro = document.getElementById('intro');
+        const skills = document.getElementById('skills');
+        const mission = document.getElementById('mission');
 
-<br>
-<img src="assets/images/logo_kk.png" alt="profile logo" width="200" height="200"> 
+        // Toggle Light/Dark Theme
+        toggleTheme.addEventListener('click', () => {
+            if (themeStyle.getAttribute('href') === 'assets/css/light_style.css') {
+                themeStyle.setAttribute('href', 'assets/css/dark_style.css');
+            } else {
+                themeStyle.setAttribute('href', 'assets/css/light_style.css');
+            }
+        });
 
-<br>
-<h1>Kat Keilty</h1>
-<h2>Driving process excellence through data driven insights</h2>
-
-<h3><a href="www.linkedin.com/in/kat-k-363351204"> Connect with me on LinkedIn</a></h3>
-
-<br>
-
-    <p>Welcome to my personal portfolio—a showcase of my journey as a determined and resourceful professional, bringing together versatile interdisciplinary expertise and a passion for tackling challenges with creativity and ingenuity.</p>
-    
-        <p>Guided by robust critical and systems thinking, I excel in crafting innovative strategies and embracing a comprehensive approach to organizational change management. My work reflects a commitment to not only achieving excellence but also inspiring growth and continuous improvement in every endeavor.</p>
-
-        <p>With a respectful, enthusiastic, and engaging demeanor, I aim to create meaningful connections and leave a positive impact. Here, you’ll find examples of my projects, achievements, and the innovative mindset that drives my work. Let’s explore the possibilities together!
-    </p>
-    
-    </body>
-
+        // Toggle English/French Language
+        toggleLanguage.addEventListener('click', () => {
+            if (toggleLanguage.innerText === 'Français') {
+                toggleLanguage.innerText = 'English';
+                tagline.innerText = 'Promouvoir l\'excellence des processus grâce à des analyses basées sur des données';
+                intro.innerText = 'Bienvenue dans mon portfolio personnel—une vitrine de mon parcours en tant que professionnelle déterminée et ingénieuse, réunissant une expertise interdisciplinaire polyvalente et une passion pour relever des défis avec créativité et ingéniosité.';
+                skills.innerText = 'Guidée par une pensée critique et systémique robuste, j\'excelle à élaborer des stratégies innovantes et à adopter une approche globale de la gestion du changement organisationnel. Mon travail reflète un engagement non seulement à atteindre l\'excellence, mais aussi à inspirer la croissance et l\'amélioration continue dans chaque entreprise.';
+                mission.innerText = 'Avec un comportement respectueux, enthousiaste et engageant, je vise à créer des connexions significatives et à laisser une empreinte positive. Ici, vous trouverez des exemples de mes projets, réalisations, et de l\'état d\'esprit innovant qui anime mon travail. Explorons les possibilités ensemble!';
+            } else {
+                toggleLanguage.innerText = 'Français';
+                tagline.innerText = 'Driving process excellence through data-driven insights';
+                intro.innerText = 'Welcome to my personal portfolio—a showcase of my journey as a determined and resourceful professional, bringing together versatile interdisciplinary expertise and a passion for tackling challenges with creativity and ingenuity.';
+                skills.innerText = 'Guided by robust critical and systems thinking, I excel in crafting innovative strategies and embracing a comprehensive approach to organizational change management. My work reflects a commitment to not only achieving excellence but also inspiring growth and continuous improvement in every endeavor.';
+                mission.innerText = 'With a respectful, enthusiastic, and engaging demeanor, I aim to create meaningful connections and leave a positive impact. Here, you’ll find examples of my projects, achievements, and the innovative mindset that drives my work. Let’s explore the possibilities together!';
+            }
+        });
+    </script>
+</body>
 </html>
-

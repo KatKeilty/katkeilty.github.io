@@ -1,3 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";
+
 body {
     background: #f7f9fc;
     background: linear-gradient(nulldeg, rgba(247, 249, 252, 1) 0%, rgba(227, 230, 232, 1) 100%);

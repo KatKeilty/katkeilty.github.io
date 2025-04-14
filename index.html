@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages Example</title>
+    <title>Kat Keilty Professional Portfolio</title>
     <link id="theme-style" rel="stylesheet" href="assets/css/light_style.css">
+    <style>
+        /* Styling for buttons */
+        #toggle-theme, #toggle-language, #linkedin-button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #toggle-theme {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #toggle-language {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #linkedin-button {
+            background-color: #0077b5;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        #linkedin-button img {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="assets/images/logo.png" alt="Logo" width="150">
-        <button id="toggle-theme" style="cursor: pointer;">
-            <img src="assets/images/light-icon.png" alt="Toggle Theme" width="30">
+        <button id="toggle-theme">
+            <img id="theme-icon" src="assets/images/light-icon.png" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
         </button>
-        <button id="toggle-language" style="cursor: pointer;">Français</button>
+        <button id="toggle-language">Français</button>
         <h1 style="font-family: 'Copperplate';">Kat Keilty</h1>
     </header>
     <main>
@@ -27,14 +59,15 @@
             With a respectful, enthusiastic, and engaging demeanor, I aim to create meaningful connections and leave a positive impact. Here, you’ll find examples of my projects, achievements, and the innovative mindset that drives my work. Let’s explore the possibilities together!
         </p>
         <footer>
-            <a href="https://www.linkedin.com/in/kat-k-363351204" target="_blank">
-                <img src="assets/images/linkedin-icon.png" alt="LinkedIn" width="30"> LinkedIn
+            <a href="https://www.linkedin.com/in/kat-k-363351204" id="linkedin-button" target="_blank">
+                <img src="assets/images/linkedin-icon.png" alt="LinkedIn Icon" width="20"> LinkedIn
             </a>
         </footer>
     </main>
     <script>
         const toggleTheme = document.getElementById('toggle-theme');
         const themeStyle = document.getElementById('theme-style');
+        const themeIcon = document.getElementById('theme-icon');
         const toggleLanguage = document.getElementById('toggle-language');
 
         const tagline = document.getElementById('tagline');
@@ -46,8 +79,10 @@
         toggleTheme.addEventListener('click', () => {
             if (themeStyle.getAttribute('href') === 'assets/css/light_style.css') {
                 themeStyle.setAttribute('href', 'assets/css/dark_style.css');
+                themeIcon.setAttribute('src', 'assets/images/dark-icon.png'); // Update icon
             } else {
                 themeStyle.setAttribute('href', 'assets/css/light_style.css');
+                themeIcon.setAttribute('src', 'assets/images/light-icon.png'); // Update icon
             }
         });
 

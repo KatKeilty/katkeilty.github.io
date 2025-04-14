@@ -1,0 +1,28 @@
+body {
+    background: #f7f9fc;
+    background: linear-gradient(nulldeg, rgba(247, 249, 252, 1) 0%, rgba(227, 230, 232, 1) 100%);
+      }
+      
+      h1 {
+        color: black;
+        text-align: center;
+        font-family: copperplate, sans-serif;
+      }
+      
+        h2 {
+        color: black;
+        text-align: center;
+        font-family: arial, sans-serif;
+      }
+      
+      p {
+          color: black;
+        font-family: helvetica, sans-serif;
+        font-size: 20px;
+    
+        border: .5 px grey;
+        border-radius: 15px;
+        background: #dedfe0;
+        background: linear-gradient(nulldeg, rgba(222, 223, 224, 1) 0%, rgba(202, 203, 204, 1) 100%);
+        padding: 20px;
+        }

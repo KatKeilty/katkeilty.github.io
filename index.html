@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kat Keilty's Homepage</title>
-    <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/light_style.css">
+    <title>Kat Keilty</title>
+    <link href= {{ 'css/style.css' | relative_url }}"assets/css/dark_style.css" type="text/css" rel="stylesheet">
     <style>
         /* Styling for buttons */
         #toggle-theme, #toggle-language, #linkedin-button {
             padding: 10px 15px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             font-family: 'Arial', sans-serif;
         }
 
         #toggle-theme {
-            background-color: #007bff;
+            background-color: #494a4b;
             color: white;
         }
 
         #toggle-language {
-            background-color: #28a745;
+            background-color: #1a2d63;
             color: white;
         }
 
@@ -40,12 +40,12 @@
 </head>
 <body>
     <header>
-        <img src="{{ site.baseurl }}/assets/images/logo_kk.png" alt="Logo" width="150">
+        <img src="{{ site.baseurl }}/docs/assets/images/logo_kk.png" alt="Logo" width="150">
         <button id="toggle-theme">
-            <img id="theme-icon" src="https://via.placeholder.com/20" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
+            <img id="theme-icon" src="{{ site.baseurl }}/docs/assets/images/" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
         </button>
         <button id="toggle-language">Français</button>
-        <h1 style="font-family: 'Copperplate';">Kat Keilty</h1>
+        <h1>Kat Keilty</h1>
     </header>
     <main>
         <h2 id="tagline" style="font-family: 'Arial';">Driving process excellence through data-driven insights</h2>
@@ -60,7 +60,7 @@
         </p>
         <footer>
             <a href="https://www.linkedin.com/in/kat-k-363351204" id="linkedin-button" target="_blank">
-                <img src="https://via.placeholder.com/20" alt="LinkedIn Icon" width="20"> LinkedIn
+                <img src="{{ site.baseurl }}\docs\assets\images\png\outline\brand-linkedin.png" alt="LinkedIn Icon" width="20"> LinkedIn
             </a>
         </footer>
     </main>
@@ -77,12 +77,12 @@
 
         // Toggle Light/Dark Theme
         toggleTheme.addEventListener('click', () => {
-            if (themeStyle.getAttribute('href') === '{{ site.baseurl }}/assets/css/light_style.css') {
-                themeStyle.setAttribute('href', '{{ site.baseurl }}/assets/css/dark_style.css');
-                themeIcon.setAttribute('src', 'https://via.placeholder.com/20/dark'); // Update icon
+            if (themeStyle.getAttribute('href') === '{{ site.baseurl }}/docs/assets/css/light_style.css') {
+                themeStyle.setAttribute('href', '{{ site.baseurl }}/docs/assets/css/dark_style.css');
+                themeIcon.setAttribute('src', '{{ site.baseurl }}/docs/assets/images/png/outline/sun.png'); 
             } else {
-                themeStyle.setAttribute('href', '{{ site.baseurl }}/assets/css/light_style.css');
-                themeIcon.setAttribute('src', 'https://via.placeholder.com/20/light'); // Update icon
+                themeStyle.setAttribute('href', '{{ site.baseurl }}/docs/assets/css/light_style.css');
+                themeIcon.setAttribute('src', '{{ site.baseurl }}/docs/assets/images/png/outline/sun.png'); 
             }
         });
 

@@ -1,53 +1,96 @@
-
+/* General Body Styling */
 body {
-        background: #1A3147;
-        background: radial-gradient(rectangle, rgba(26, 49, 71, 1) 0%, rgba(19, 37, 56, 1) 25%, rgba(11, 26, 41, 1) 50%, rgba(19, 37, 56, 1) 75%, rgba(26, 49, 71, 1) 99%);
-        }
-  
-  h1 {
-        color: white;
-        text-align: center;
-        font-family: copperplate, sans-serif;
-    }
-  
-    h2 {
-        color: white;
-        text-align: center;
-        font-family: arial, sans-serif;
-    }
-  
+  background: #1A3147;
+  background: radial-gradient(circle, rgba(26, 49, 71, 1) 0%, rgba(19, 37, 56, 1) 25%, rgba(11, 26, 41, 1) 50%, rgba(19, 37, 56, 1) 75%, rgba(26, 49, 71, 1) 99%);
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #112535;
+  border-bottom: 2px solid #1A3147;
+}
+
+header img {
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: white;
+  font-family: Copperplate, Georgia, serif;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Paragraph Styling */
+p {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  border: 0.5px solid grey;
+  border-radius: 15px;
+  background: #25373E;
+  background: radial-gradient(circle, rgba(37, 55, 62, 1) 0%, rgba(28, 41, 46, 1) 25%, rgba(19, 28, 30, 1) 50%, rgba(28, 41, 46, 1) 75%, rgba(37, 55, 62, 1) 99%);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: justify;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #112535;
+  color: white;
+  border-top: 2px solid #1A3147;
+}
+
+/* Button Styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  h1, h2 {
+      font-size: 1.5em;
+  }
   p {
-  	color: white;
-    font-family: helvetica, sans-serif;
-    font-size: 20px;
+      font-size: 18px;
+      width: 90%;
+  }
+}
 
-    border: .5 px grey;
-    border-radius: 15px;
-    background: #25373E;
-    background: radial-gradient(rectangle, rgba(37, 55, 62, 1) 0%, rgba(28, 41, 46, 1) 25%, rgba(19, 28, 30, 1) 50%, rgba(28, 41, 46, 1) 75%, rgba(37, 55, 62, 1) 99%);
-    padding: 20px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .item1 {grid-area: 1 / span 6;}
-        .item2 {grid-area: 2 / span 6;}
-        .item3 {grid-area: 3 / span 6;}
-        .item4 {grid-area: 4 / span 6;}
-        .item5 {grid-area: 5 / span 6;}
-      }
-      
-      @media only screen and (min-width: 600px) {
-        .item1 {grid-area: 1 / span 6;}
-        .item2 {grid-area: 2 / span 1;}
-        .item3 {grid-area: 2 / span 4;}
-        .item4 {grid-area: 3 / span 6;}
-        .item5 {grid-area: 4 / span 6;}
-      }
-      
-      @media only screen and (min-width: 768px) {
-        .item1 {grid-area: 1 / span 6;}
-        .item2 {grid-area: 2 / span 1;}
-        .item3 {grid-area: 2 / span 4;}
-        .item4 {grid-area: 2 / span 1;}
-        .item5 {grid-area: 3 / span 6;}
-      }
+@media only screen and (min-width: 768px) {
+  h1 {
+      font-size: 3em;
+  }
+  h2 {
+      font-size: 2.5em;
+  }
+}

@@ -42,7 +42,7 @@
     <header>
         <img src="docs/assets/images/logo_kk.png" alt="Logo" width="150">
         <button id="toggle-theme">
-            <img id="theme-icon" src="/docs/assets/images/" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
+            <img id="theme-icon" src="docs/assets/images/" alt="Theme Icon" width="20"> Toggle Light/Dark Mode
         </button>
         <button id="toggle-language">Français</button>
         <h1>Kat Keilty</h1>
@@ -77,12 +77,12 @@
 
         // Toggle Light/Dark Theme
         toggleTheme.addEventListener('click', () => {
-            if (themeStyle.getAttribute('href') === '/docs/assets/css/light_style.css') {
-                themeStyle.setAttribute('href', '/docs/assets/css/dark_style.css');
-                themeIcon.setAttribute('src', '/docs/assets/images/png/outline/sun.png'); 
+            if (themeStyle.getAttribute('href') === 'docs/assets/css/light_style.css') {
+                themeStyle.setAttribute('href', 'docs/assets/css/dark_style.css');
+                themeIcon.setAttribute('src', 'docs/assets/images/png/outline/sun.png'); 
             } else {
-                themeStyle.setAttribute('href', '/docs/assets/css/light_style.css');
-                themeIcon.setAttribute('src', '/docs/assets/images/png/outline/sun.png'); 
+                themeStyle.setAttribute('href', 'docs/assets/css/light_style.css');
+                themeIcon.setAttribute('src', 'docs/assets/images/png/outline/sun.png'); 
             }
         });
 

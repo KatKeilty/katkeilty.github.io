@@ -1,7 +1,7 @@
 # Site Configuration
 baseurl: "/katkeilty.github.io" # Include repository name for proper file paths
 title: Kat Keilty
-description: Bookmark this to keep an eye on my project updates!
+description: Professional portfolio
 permalink: date
 paginate_path: /page:num
 timezone: null

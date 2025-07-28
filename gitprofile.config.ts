@@ -224,13 +224,50 @@ const CONFIG = {
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: true,
+    respectPrefersColorScheme: false,
 
     // Display the ring in Profile picture
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: ['light', 'dark', 'corporate', 'synthwave', 'retro'],
+    themes: [
+      'light',
+      'dark',
+      'cupcake',
+      'bumblebee',
+      'emerald',
+      'corporate',
+      'synthwave',
+      'retro',
+      'cyberpunk',
+      'valentine',
+      'halloween',
+      'garden',
+      'forest',
+      'aqua',
+      'lofi',
+      'pastel',
+      'fantasy',
+      'wireframe',
+      'black',
+      'luxury',
+      'dracula',
+      'cmyk',
+      'autumn',
+      'business',
+      'acid',
+      'lemonade',
+      'night',
+      'coffee',
+      'winter',
+      'dim',
+      'nord',
+      'sunset',
+      'caramellatte',
+      'abyss',
+      'silk',
+      'procyon',
+    ],
 
     // Custom theme, applied to `procyon` theme
     customTheme: {

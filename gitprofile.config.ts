@@ -230,13 +230,7 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: [
-      'light',
-      'dark',
-      'corporate',
-      'synthwave',
-      'retro',
-    ],
+    themes: ['light', 'dark', 'corporate', 'synthwave', 'retro'],
 
     // Custom theme, applied to `procyon` theme
     customTheme: {

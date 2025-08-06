@@ -158,6 +158,12 @@ const CONFIG = {
   ],
   certifications: [
     {
+      name: 'ASQ Certified Quality Process Analyst',
+      body: 'CQPA Body of Knowledge: Quality Concepts and Tools, Problem Solving and Improvement, Data Analysis, Customer-Supplier Relations, Corrective and Preventive Action (CAPA)',
+      year: '2025',
+      link: 'https://credentials.asq.org/7ab48487-1ba4-424b-b032-93d254a126ab#acc.42FzIujD',
+    },
+    {
       name: 'Lean Six Sigma Black Belt',
       body: 'Six Sigma Body of Knowledge: Team leadership & dynamics, DMAIC model, Hypothesis testing, Design of Experiment',
       year: '2024',

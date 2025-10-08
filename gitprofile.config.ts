@@ -29,53 +29,53 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'Initiatives & Projects',
+      header: 'Project Highlights',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Tracking & Metrics',
+          title: 'Digital Transformation & ERP Implementation | Business Analyst',
           description:
-            'Develop bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintain PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement',
+            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Led Process coordination efforts  to aid adoption across teams. ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Metrics.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Software Implementation & Database Administration',
+          title: 'CRM Implementation | Subject Matter Expert',
           description:
-            'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement',
+            'Supported deployment of a new CRM system for a manufacturing site, resulting in rapid adoption and measurable business impact in less than 6 months.✓ Change management ✓ User training & adoption ✓ Metrics tracking ✓ Sales process optimization',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/QMS.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Audit Digitization & Process Standardization',
+          title: 'Quality Management System Implementation | Project Manager',
           description:
-            'Modernized audit processes by leading software implementation, training auditors, and migrating legacy systems. Improved efficiency, accuracy & consistency with standardized procedures and innovative tools. #ISOCompliance #ProjectManagement #ProcessImprovement #Auditing',
+            'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements. ✓ Full project lifecycle management ✓ Change management at scale ✓ User training & documentation ✓ Data migration & integrity ✓ ROI measurement ✓ Vendor relationship management ✓ Process optimization ✓ Strategic reporting ',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Audit.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Digital Transformation & ERP Implementation',
+          title: 'Enterprise M365 Platform Rollout | Super User',
           description:
-            'Facilitated collaboration among stakeholders, including francophone partners, while leading training on Oracle NetSuite, M365 and Isovision. Championed data migration with SQL tools, bridging system gaps & driving tech adoption. #ERP #DataMigration #StakeholderManagement',
+            'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools. ✓ Cross-cultural facilitation ✓ Early adopter / pilot tester ✓ User advocacy ✓ Documentation translation ✓ Change champion',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/ERP.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Document Control',
+          title: 'Operational & Financial ImpactsBusiness Improvement Numbers',
           description:
-            'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, legible materials. #Documentation #WorkflowManagement #VersionControl',
+            '📋 40% increase in QMS traffic ✅ 94% increase in quality reports 📉 93% supplier NC reduction 📉 85% customer NC reduction 📉 23% internal NC reduction 🔍 10+ modules configured (50 users) 📄 400+ documents migrated 500+ Active ⭐ 83% on-time action completion rate 📈 48% rework/scrap decrease 💰 $90K+ cost savings delivered ✅ 19% improvement in On-Time Delivery',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Leadership and Training',
+          title: 'Team Development Numbers',
           description:
-            'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement',
+            '👤 Trained 4 Junior ISO Auditors 👥 Onboarded & mentored 3 junior staff 📚 Managed ~20 QMS users during implementation 🎓 Guided 25+ end users (M365) 🌟 10+ years of service 👥 500+ training hours delivered 📱 200+ training sessions conducted 🌐 650+ employees supported (6 sites) 💻 75+ DevOps sprints supported',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Leadership.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -86,7 +86,7 @@ const CONFIG = {
   seo: {
     title: 'Portfolio of Kat Keilty',
     description:
-      'I make work smoother by connecting the dots between business, technology, and people. I simplify processes, solve problems, and help teams work better together. ',
+      'With 10+ years transforming processes and empowering teams, I make technology work for people, not the other way around.',
     imageURL:
       'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/9b65af2610bfe6eab4cdf4fb9f5a63222db8bb90/public/logoBranding/womanLogo.png',
   },

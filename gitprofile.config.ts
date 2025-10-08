@@ -29,14 +29,14 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'Project Highlights',
+      header: 'Projects and Highlights',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
           title:
-            'Digital Transformation & ERP Implementation | Business Analyst',
+            'Digital Transformation | Business Analyst',
           description:
-            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Led Process coordination efforts  to aid adoption across teams.\
+            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led Process coordination efforts  to aid adoption across teams.\
             ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Metrics.png',
@@ -52,7 +52,7 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Quality Management System Implementation | Project Manager',
+          title: 'QMS Implementation | Project Manager',
           description:
             'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.\
             ✓ Full project lifecycle management ✓ Change management at scale ✓ User training & documentation ✓ Data migration & integrity ✓ ROI measurement ✓ Vendor relationship management ✓ Process optimization ✓ Strategic reporting ',
@@ -61,7 +61,7 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Enterprise M365 Platform Rollout | Super User',
+          title: 'M365 Platform Rollout | Super User',
           description:
             'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.\
             ✓ Cross-cultural facilitation ✓ Early adopter / pilot tester ✓ User advocacy ✓ Documentation translation ✓ Change champion',
@@ -70,7 +70,7 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Business Improvement Numbers',
+          title: 'Business Improvement',
           description:
             '📋 40% increase in QMS traffic\
             ✅ 94% increase in quality reports\
@@ -88,7 +88,7 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Team Development Numbers',
+          title: 'Team Development',
           description:
             '👤 Trained 4 Junior ISO Auditors\
             👥 Onboarded & mentored 3 junior staff\

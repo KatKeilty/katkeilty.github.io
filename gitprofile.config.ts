@@ -36,7 +36,8 @@ const CONFIG = {
           title:
             'Digital Transformation & ERP Implementation | Business Analyst',
           description:
-            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Led Process coordination efforts  to aid adoption across teams. ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
+            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Led Process coordination efforts  to aid adoption across teams.\
+            ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Metrics.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -44,7 +45,8 @@ const CONFIG = {
         {
           title: 'CRM Implementation | Subject Matter Expert',
           description:
-            'Supported deployment of a new CRM system for a manufacturing site, resulting in rapid adoption and measurable business impact in less than 6 months.✓ Change management ✓ User training & adoption ✓ Metrics tracking ✓ Sales process optimization',
+            'Supported deployment of a new CRM system for a manufacturing site, resulting in rapid adoption and measurable business impact in less than 6 months.\
+            ✓ Change management ✓ User training & adoption ✓ Metrics tracking ✓ Sales process optimization',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/QMS.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -52,7 +54,8 @@ const CONFIG = {
         {
           title: 'Quality Management System Implementation | Project Manager',
           description:
-            'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements. ✓ Full project lifecycle management ✓ Change management at scale ✓ User training & documentation ✓ Data migration & integrity ✓ ROI measurement ✓ Vendor relationship management ✓ Process optimization ✓ Strategic reporting ',
+            'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.\
+            ✓ Full project lifecycle management ✓ Change management at scale ✓ User training & documentation ✓ Data migration & integrity ✓ ROI measurement ✓ Vendor relationship management ✓ Process optimization ✓ Strategic reporting ',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Audit.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -60,15 +63,26 @@ const CONFIG = {
         {
           title: 'Enterprise M365 Platform Rollout | Super User',
           description:
-            'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools. ✓ Cross-cultural facilitation ✓ Early adopter / pilot tester ✓ User advocacy ✓ Documentation translation ✓ Change champion',
+            'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.\
+            ✓ Cross-cultural facilitation ✓ Early adopter / pilot tester ✓ User advocacy ✓ Documentation translation ✓ Change champion',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/ERP.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Operational & Financial ImpactsBusiness Improvement Numbers',
+          title: 'Business Improvement Numbers',
           description:
-            '📋 40% increase in QMS traffic ✅ 94% increase in quality reports 📉 93% supplier NC reduction 📉 85% customer NC reduction 📉 23% internal NC reduction 🔍 10+ modules configured (50 users) 📄 400+ documents migrated 500+ Active ⭐ 83% on-time action completion rate 📈 48% rework/scrap decrease 💰 $90K+ cost savings delivered ✅ 19% improvement in On-Time Delivery',
+            '📋 40% increase in QMS traffic\
+            ✅ 94% increase in quality reports\
+            📉 93% supplier NC reduction\
+            📉 85% customer NC reduction\
+            📉 23% internal NC reduction\
+            🔍 10+ modules configured (50 users)\
+            📄 400+ documents migrated 500+ Active\
+            ⭐ 83% on-time action completion rate\
+            📈 48% rework/scrap decrease\
+            💰 $90K+ cost savings delivered\
+            ✅ 19% improvement in On-Time Delivery',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -76,7 +90,15 @@ const CONFIG = {
         {
           title: 'Team Development Numbers',
           description:
-            '👤 Trained 4 Junior ISO Auditors 👥 Onboarded & mentored 3 junior staff 📚 Managed ~20 QMS users during implementation 🎓 Guided 25+ end users (M365) 🌟 10+ years of service 👥 500+ training hours delivered 📱 200+ training sessions conducted 🌐 650+ employees supported (6 sites) 💻 75+ DevOps sprints supported',
+            '👤 Trained 4 Junior ISO Auditors\
+            👥 Onboarded & mentored 3 junior staff\
+            📚 Managed ~20 QMS users during implementation\
+            🎓 Guided 25+ end users (M365)\
+            🌟 10+ years of service\
+            👥 500+ training hours delivered\
+            📱 200+ training sessions conducted\
+            🌐 650+ employees supported (6 sites)\
+            💻 75+ DevOps sprints supported',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Leadership.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -125,6 +147,7 @@ const CONFIG = {
     'DAX',
     'PowerQuery',
     'VsCode',
+    'Azure DevOps',
     'Git',
     'HTML',
     'Solutions Development',
@@ -143,25 +166,29 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: 'Beclawat Manufacturing',
-      position: 'Quality Specialist (remote/hybrid)',
+      company: 'Prelco Industrial | Quality Specialist',
+      position: '👥 Collaborate with corporate, vendors & consultants\
+      🚀 Managed QMS implementation saving $90K+ & cutting defects by up to 93%\
+      📊 Build bilingual dashboards (PowerBI, SQL, Excel) with SQL views from FR/EN data\
+      🔧 Use DevOps, Git, VsCode, M365 for version control\
+      🧠 Boost efficiency via AI, automation & standardization\
+      🔍 Lead ISO 9001/14001 audit program; train Junior Auditors\
+      🌐 Create bilingual SharePoint and translate materials',
       from: '2022',
       to: 'Present',
-      companyLink: 'https://beclawat.com/',
+      companyLink: 'https://www.prelco.ca/en/',
     },
     {
-      company: 'Beclawat Manufacturing',
-      position: 'Quality Auditor (remote/hybrid)',
+      company: 'Beclawat Manufacturing | Quality Auditor ',
+      position: '📄 Manage standards, specs, docs & training for 45+ staff\
+      🗃️ Maintain QMS database; train & support ~20 users\
+      📊 Streamline reporting & vendor scorecards via Power Automate\
+      🔄 Coordinate interdepartmental reporting & communication\
+      👥 Onboard & train junior staff with focus on quality\
+      🔍 Audit ISO 9001 compliance; investigate & report processes',
       from: '2018',
       to: '2022',
       companyLink: 'https://beclawat.com/',
-    },
-    {
-      company: 'Various',
-      position: 'Fabrication/fitter',
-      from: '2012',
-      to: '2018',
-      companyLink: 'www.linkedin.com/in/katkeilty',
     },
   ],
   certifications: [
@@ -169,35 +196,41 @@ const CONFIG = {
       name: 'ASQ Certified Quality Process Analyst',
       body: 'CQPA Body of Knowledge: Quality Concepts and Tools, Problem Solving and Improvement, Data Analysis, Customer-Supplier Relations, Corrective and Preventive Action (CAPA)',
       year: '2025',
-      link: 'https://credentials.asq.org/7ab48487-1ba4-424b-b032-93d254a126ab#acc.42FzIujD',
+      link: 'https://credentials.asq.org/7ab48487-1ba4-424b-b032-93d254a126ab#acc.mgu4ZKnL',
     },
     {
       name: 'Lean Six Sigma Black Belt',
       body: 'Six Sigma Body of Knowledge: Team leadership & dynamics, DMAIC model, Hypothesis testing, Design of Experiment',
-      year: '2024',
+      year: '2025',
       link: 'https://www.credential.net/59384ce5-82e8-40b2-b1b1-1b92e48698d7?username=katrinakeilty53897',
     },
     {
+      name: 'CFI BIDA Certificate, Business Intelligence & Data Analyst',
+      body: 'Advanced Excel, Power BI, Power Query, Power Pivot, SQL, Tableau, Python. Statistical analysis, business intelligence, data science principles.',
+      year: '2024',
+      link: 'http://credentials.corporatefinanceinstitute.com/bf3107b3-e933-4ed7-8d00-2c6e75e60f15#acc.rUYKB5ij',
+    },
+    {
       name: 'ISO 9001:2015 & 14001:2015 Internal Auditor',
-      body: ' Internal Audits · ISO Standards · Interviewing · Process Improvement · Corrective and Preventive Action (CAPA)',
+      body: 'Internal Audits · ISO Standards · Interviewing · Process Improvement · Corrective and Preventive Action (CAPA)',
       year: '2017, 2024',
       link: 'https://www.credential.net/59384ce5-82e8-40b2-b1b1-1b92e48698d7?username=katrinakeilty53897',
     },
     {
       name: 'Failure Modes and Effects Analysis AIAG & VDA FMEA Training',
-      body: ' Quality (ISO 9001), Automotive (IATF 16949), Manufacturing & Operations, Process Improvement',
+      body: 'Quality (ISO 9001), Automotive (IATF 16949), Manufacturing & Operations, Process Improvement',
       year: '2023',
       link: 'https://thebrc.ca/product/aiag-vda-fmea-1st-edition-2/',
     },
   ],
   educations: [
     {
-      institution: 'The Corporate Finance Institute',
-      degree: 'BIDA Certificate, Business Intelligence & Data Analyst',
-      from: '2023',
-      to: '2024',
+      institution: 'Athabasca University',
+      degree: 'Bachelor of Science, Computing and Information Systems Major',
+      from: 'Currently Enrolled',
+      to: '',
       description:
-        'Advanced Excel, Power BI, Power Query, Power Pivot, SQL, Tableau, Python. Statistical analysis, business intelligence, data science principles.',
+        'Database management, Data structures and algorithms, Programming, Systems analysis and design, Scientific research, Math and Statistics, Development, management, and optimization of IT systems across sectors.',
     },
     {
       institution: 'Loyalist College',

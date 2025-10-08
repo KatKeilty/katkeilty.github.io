@@ -33,7 +33,8 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Digital Transformation & ERP Implementation | Business Analyst',
+          title:
+            'Digital Transformation & ERP Implementation | Business Analyst',
           description:
             'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Led Process coordination efforts  to aid adoption across teams. ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
           imageUrl:

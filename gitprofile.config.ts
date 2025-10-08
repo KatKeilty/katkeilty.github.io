@@ -114,25 +114,32 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/9f8c78ea29e12ebfd160186dc9adf42f781cec46/public/resume/katKeiltySummaryResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/b8870adfb365bf1ffdef9f11ad7d6fa14eb8a2bc/public/resume/Kat%20Keilty%20Professional%20Summary%20Public.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
+    'Business Intelligence',
     'SQL',
+    'NetSuite',
+    'ETL',
     'PowerBI',
     'DAX',
     'PowerQuery',
+    'VsCode',
     'Git',
     'HTML',
-    'ETL',
+    'Solutions Development',
     'M365',
     'SharePoint',
-    'Data Analysis',
-    'Data Modeling',
-    'Database Administration',
-    'Stakeholder Management',
-    'Requirements Gathering',
-    'Solutions Development',
+    'CRM',
+    'ERP',
+    'Agile',
+    'Waterfall',
     'Process Improvement',
+    'QMS',
+    'ISO 9001/14001',
+    'PFMEA',
+    'Visio',
+    'LucidChart',
   ],
   experiences: [
     {

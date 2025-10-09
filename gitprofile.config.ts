@@ -33,8 +33,7 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title:
-            'Digital Transformation | Business Analyst',
+          title: 'Digital Transformation | Business Analyst',
           description:
             'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led Process coordination efforts  to aid adoption across teams.\
             ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
@@ -81,7 +80,7 @@ const CONFIG = {
             📄 400+ documents migrated 500+ Active\
             ⭐ 83% on-time action completion rate\
             📈 48% rework/scrap decrease\
-            💰 $90K+ cost savings delivered\
+            💰 $100K+ cost savings delivered\
             ✅ 19% improvement in On-Time Delivery',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
@@ -98,7 +97,7 @@ const CONFIG = {
             👥 500+ training hours delivered\
             📱 200+ training sessions conducted\
             🌐 650+ employees supported (6 sites)\
-            💻 75+ DevOps sprints supported',
+            💻 75+ DevOps sprints contributed',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Leadership.png',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -167,25 +166,27 @@ const CONFIG = {
   experiences: [
     {
       company: 'Prelco Industrial | Quality Specialist',
-      position: '👥 Collaborate with corporate, vendors & consultants\
-      🚀 Managed QMS implementation saving $90K+ & cutting defects by up to 93%\
+      position:
+        '👥 Collaborate with corporate, vendors & consultants\
+      🚀 Managed QMS implementation saving $100K+ & cutting defects by up to 93%\
       📊 Build bilingual dashboards (PowerBI, SQL, Excel) with SQL views from FR/EN data\
       🔧 Use DevOps, Git, VsCode, M365 for version control\
       🧠 Boost efficiency via AI, automation & standardization\
       🔍 Lead ISO 9001/14001 audit program; train Junior Auditors\
-      🌐 Create bilingual SharePoint and translate materials',
+      🌐 Created bilingual SharePoint and translate materials',
       from: '2022',
       to: 'Present',
       companyLink: 'https://www.prelco.ca/en/',
     },
     {
       company: 'Beclawat Manufacturing | Quality Auditor ',
-      position: '📄 Manage standards, specs, docs & training for 45+ staff\
-      🗃️ Maintain QMS database; train & support ~20 users\
-      📊 Streamline reporting & vendor scorecards via Power Automate\
-      🔄 Coordinate interdepartmental reporting & communication\
-      👥 Onboard & train junior staff with focus on quality\
-      🔍 Audit ISO 9001 compliance; investigate & report processes',
+      position:
+        '📄 Managed standards, specs, docs & training for 45+ staff\
+      🗃️ Maintenance of QMS database; train & support for ~20 users\
+      📊 Streamlined reporting & vendor scorecards via Power Automate\
+      🔄 Coordinated interdepartmental reporting & communication\
+      👥 Onboarded & trained junior staff with focus on quality\
+      🔍 Audit ISO 9001 compliance; investigate & report on processes',
       from: '2018',
       to: '2022',
       companyLink: 'https://beclawat.com/',

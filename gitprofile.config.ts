@@ -77,10 +77,10 @@ const CONFIG = {
             📉 85% customer NC reduction\
             📉 23% internal NC reduction\
             🔍 10+ modules configured (50 users)\
-            📄 400+ documents migrated 500+ Active\
+            📄 400+ documents migrated, 500+ Active\
             ⭐ 83% on-time action completion rate\
             📈 48% rework/scrap decrease\
-            💰 $100K+ cost savings delivered\
+            💰 $200K+ cost savings delivered\
             ✅ 19% improvement in On-Time Delivery',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
@@ -93,7 +93,7 @@ const CONFIG = {
             👥 Onboarded & mentored 3 junior staff\
             📚 Managed ~20 QMS users during implementation\
             🎓 Guided 25+ end users (M365)\
-            🌟 10+ years of service\
+            🌟 10+ years of experience\
             👥 500+ training hours delivered\
             📱 200+ training sessions conducted\
             🌐 650+ employees supported (6 sites)\
@@ -165,28 +165,29 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: 'Prelco Industrial | Quality Specialist',
-      position:
-        '👥 Collaborate with corporate, vendors & consultants\
-      🚀 Managed QMS implementation saving $100K+ & cutting defects by up to 93%\
-      📊 Build bilingual dashboards (PowerBI, SQL, Excel) with SQL views from FR/EN data\
-      🔧 Use DevOps, Git, VsCode, M365 for version control\
-      🧠 Boost efficiency via AI, automation & standardization\
-      🔍 Lead ISO 9001/14001 audit program; train Junior Auditors\
-      🌐 Created bilingual SharePoint and translate materials',
+      company: `<div style="test-align: justify; text-align-last: left;"> 
+      👥 Collaborate with corporate, vendors & consultants
+      🚀 Managed QMS implementation saving $100K+ & cutting defects by up to 93%
+      📊 Build bilingual dashboards (PowerBI, SQL, Excel) with SQL views from FR/EN data
+      🔧 Use DevOps, Git, VsCode, M365 for version control
+      🧠 Boost efficiency via AI, automation & standardization
+      🔍 Lead ISO 9001/14001 audit program; train Junior Auditors
+      🌐 Created bilingual SharePoint and translate materials
+      </div>`,
+      position: 'Prelco | Quality Specialist',
       from: '2022',
       to: 'Present',
       companyLink: 'https://www.prelco.ca/en/',
     },
     {
-      company: 'Beclawat Manufacturing | Quality Auditor ',
-      position:
+      company:
         '📄 Managed standards, specs, docs & training for 45+ staff\
       🗃️ Maintenance of QMS database; train & support for ~20 users\
       📊 Streamlined reporting & vendor scorecards via Power Automate\
       🔄 Coordinated interdepartmental reporting & communication\
       👥 Onboarded & trained junior staff with focus on quality\
       🔍 Audit ISO 9001 compliance; investigate & report on processes',
+      position: 'Beclawat | Quality Auditor',
       from: '2018',
       to: '2022',
       companyLink: 'https://beclawat.com/',
@@ -194,19 +195,19 @@ const CONFIG = {
   ],
   certifications: [
     {
-      name: 'ASQ Certified Quality Process Analyst',
+      name: 'ASQ | Certified Quality Process Analyst (CQPA)',
       body: 'CQPA Body of Knowledge: Quality Concepts and Tools, Problem Solving and Improvement, Data Analysis, Customer-Supplier Relations, Corrective and Preventive Action (CAPA)',
       year: '2025',
       link: 'https://credentials.asq.org/7ab48487-1ba4-424b-b032-93d254a126ab#acc.mgu4ZKnL',
     },
     {
-      name: 'Lean Six Sigma Black Belt',
+      name: 'CSSB | Lean Six Sigma Black Belt (LSSBB)',
       body: 'Six Sigma Body of Knowledge: Team leadership & dynamics, DMAIC model, Hypothesis testing, Design of Experiment',
       year: '2025',
       link: 'https://www.credential.net/59384ce5-82e8-40b2-b1b1-1b92e48698d7?username=katrinakeilty53897',
     },
     {
-      name: 'CFI BIDA Certificate, Business Intelligence & Data Analyst',
+      name: 'CFI | Business Intelligence & Data Analyst (BIDA)',
       body: 'Advanced Excel, Power BI, Power Query, Power Pivot, SQL, Tableau, Python. Statistical analysis, business intelligence, data science principles.',
       year: '2024',
       link: 'http://credentials.corporatefinanceinstitute.com/bf3107b3-e933-4ed7-8d00-2c6e75e60f15#acc.rUYKB5ij',

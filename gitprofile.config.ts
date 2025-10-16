@@ -165,15 +165,13 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: `<div style="test-align: justify; text-align-last: left;"> 
-      👥 Collaborate with corporate, vendors & consultants
+      company: ` 👥 Collaborate with corporate, vendors & consultants
       🚀 Managed QMS implementation saving $100K+ & cutting defects by up to 93%
       📊 Build bilingual dashboards (PowerBI, SQL, Excel) with SQL views from FR/EN data
       🔧 Use DevOps, Git, VsCode, M365 for version control
       🧠 Boost efficiency via AI, automation & standardization
       🔍 Lead ISO 9001/14001 audit program; train Junior Auditors
-      🌐 Created bilingual SharePoint and translate materials
-      </div>`,
+      🌐 Created bilingual SharePoint and translate materials`,
       position: 'Prelco | Quality Specialist',
       from: '2022',
       to: 'Present',

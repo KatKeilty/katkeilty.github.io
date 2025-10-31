@@ -171,7 +171,7 @@ const CONFIG = {
       📊 Build bilingual dashboards (PowerBI, SQL, Excel) with FR/EN data
       🔧 Use DevOps, Git, VsCode, M365 for version control
       🧠 Boost efficiency via AI, automation & standardization
-      🔍 Lead ISO 9001/14001 audit program; train Junior Auditors
+      🔍 Lead ISO 9001/14001 audit program; train Auditors
       🌐 Create bilingual Resources, Presentations & Documentation`,
       position: 'Prelco | Quality Specialist',
       from: '2022',

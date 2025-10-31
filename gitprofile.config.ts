@@ -33,9 +33,44 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
+          title: 'Business Improvements',
+          description:
+            '💰 $295K Cost savings delivered\
+            ✅ +15% On-Time Delivery\
+            ✅ +22% Profit\
+            📉 -88% customer complaint reduction\
+            📈 +11% Labour efficiency gained\
+            📈 -37% COPQA % of Revenue\
+            📋 +71% QMS traffic\
+            📉 -84% supplier issue reduction\
+            🔍 10+ modules configured\
+            📄 400+ documents migrated, 500+ Active\
+            ⭐ 86% on-time action completion rate\
+            ',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
+          link: 'https://www.linkedin.com/in/katkeilty',
+        },
+        {
+          title: 'Team Development',
+          description:
+            '👤 4 Junior ISO Auditors Trained\
+            👥 3 Junior staff Onboarded & mentored \
+            📚 ~20 QMS Users trained during implementation\
+            🎓 25+ End users supported (M365)\
+            🌟 10+ Years of experience\
+            👥 500+ training hours delivered\
+            📱 200+ training sessions conducted\
+            🌐 650+ employees supported (6 sites)\
+            💻 75+ DevOps sprints contributed',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Leadership.png',
+          link: 'https://www.linkedin.com/in/katkeilty',
+        },
+        {
           title: 'Digital Transformation | Business Analyst',
           description:
-            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led Process coordination efforts  to aid adoption across teams.\
+            'Large-scale digital transformation across multiple sites, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led Process coordination efforts to aid adoption across teams.\
             ✓ Cross-functional coordination ✓ Bilingual stakeholder management ✓ Agile/Waterfall methodologies ✓ Legacy system migration ✓ DevOps collaboration ✓ AI-assisted productivity',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Metrics.png',
@@ -66,40 +101,6 @@ const CONFIG = {
             ✓ Cross-cultural facilitation ✓ Early adopter / pilot tester ✓ User advocacy ✓ Documentation translation ✓ Change champion',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/ERP.png',
-          link: 'https://www.linkedin.com/in/katkeilty',
-        },
-        {
-          title: 'Business Improvement',
-          description:
-            '📋 40% increase in QMS traffic\
-            ✅ 94% increase in quality reports\
-            📉 93% supplier NC reduction\
-            📉 85% customer NC reduction\
-            📉 23% internal NC reduction\
-            🔍 10+ modules configured (50 users)\
-            📄 400+ documents migrated, 500+ Active\
-            ⭐ 83% on-time action completion rate\
-            📈 48% rework/scrap decrease\
-            💰 $200K+ cost savings delivered\
-            ✅ 19% improvement in On-Time Delivery',
-          imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
-          link: 'https://www.linkedin.com/in/katkeilty',
-        },
-        {
-          title: 'Team Development',
-          description:
-            '👤 Trained 4 Junior ISO Auditors\
-            👥 Onboarded & mentored 3 junior staff\
-            📚 Managed ~20 QMS users during implementation\
-            🎓 Guided 25+ end users (M365)\
-            🌟 10+ years of experience\
-            👥 500+ training hours delivered\
-            📱 200+ training sessions conducted\
-            🌐 650+ employees supported (6 sites)\
-            💻 75+ DevOps sprints contributed',
-          imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Leadership.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
@@ -166,12 +167,12 @@ const CONFIG = {
   experiences: [
     {
       company: ` 👥 Collaborate with corporate, vendors & consultants
-      🚀 Managed QMS implementation saving $100K+ & cutting defects by up to 93%
-      📊 Build bilingual dashboards (PowerBI, SQL, Excel) with SQL views from FR/EN data
+      🚀 Lead software and process implementation projects
+      📊 Build bilingual dashboards (PowerBI, SQL, Excel) with FR/EN data
       🔧 Use DevOps, Git, VsCode, M365 for version control
       🧠 Boost efficiency via AI, automation & standardization
       🔍 Lead ISO 9001/14001 audit program; train Junior Auditors
-      🌐 Created bilingual SharePoint and translate materials`,
+      🌐 Create bilingual Resources, Presentations & Documentation`,
       position: 'Prelco | Quality Specialist',
       from: '2022',
       to: 'Present',
@@ -179,10 +180,9 @@ const CONFIG = {
     },
     {
       company:
-        '📄 Managed standards, specs, docs & training for 45+ staff\
-      🗃️ Maintenance of QMS database; train & support for ~20 users\
-      📊 Streamlined reporting & vendor scorecards via Power Automate\
-      🔄 Coordinated interdepartmental reporting & communication\
+        '📄 Managed standards, specs, documentation & training for 45+ staff\
+      🗃️ Maintenance of QMS database; training & support for ~20 users\
+      📊 Streamlined communication with reporting through PowerBI & Power Automate\
       👥 Onboarded & trained junior staff with focus on quality\
       🔍 Audit ISO 9001 compliance; investigate & report on processes',
       position: 'Beclawat | Quality Auditor',
@@ -211,13 +211,13 @@ const CONFIG = {
       link: 'http://credentials.corporatefinanceinstitute.com/bf3107b3-e933-4ed7-8d00-2c6e75e60f15#acc.rUYKB5ij',
     },
     {
-      name: 'ISO 9001:2015 & 14001:2015 Internal Auditor',
+      name: 'BRC | ISO 9001:2015 & 14001:2015 Internal Auditor',
       body: 'Internal Audits · ISO Standards · Interviewing · Process Improvement · Corrective and Preventive Action (CAPA)',
       year: '2017, 2024',
       link: 'https://www.credential.net/59384ce5-82e8-40b2-b1b1-1b92e48698d7?username=katrinakeilty53897',
     },
     {
-      name: 'Failure Modes and Effects Analysis AIAG & VDA FMEA Training',
+      name: 'BRC | Failure Modes and Effects Analysis AIAG & VDA FMEA Training',
       body: 'Quality (ISO 9001), Automotive (IATF 16949), Manufacturing & Operations, Process Improvement',
       year: '2023',
       link: 'https://thebrc.ca/product/aiag-vda-fmea-1st-edition-2/',

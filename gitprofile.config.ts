@@ -69,35 +69,37 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Business Improvement',
-          description:
-            '📋 40% increase in QMS traffic\
-            ✅ 94% increase in quality reports\
-            📉 93% supplier NC reduction\
-            📉 85% customer NC reduction\
-            📉 23% internal NC reduction\
-            🔍 10+ modules configured (50 users)\
-            📄 400+ documents migrated, 500+ Active\
-            ⭐ 83% on-time action completion rate\
-            📈 48% rework/scrap decrease\
-            💰 $200K+ cost savings delivered\
-            ✅ 19% improvement in On-Time Delivery',
+          title: 'Highlights | Business Improvement',
+          description: [
+            '📋 40% increase in QMS traffic',
+            '✅ 94% increase in quality reports',
+            '📉 93% supplier NC reduction',
+            '📉 85% customer NC reduction',
+            '📉 23% internal NC reduction',
+            '🔍 10+ modules configured (50 users)',
+            '📄 400+ documents migrated, 500+ Active',
+            '⭐ 83% on-time action completion rate',
+            '📈 48% rework/scrap decrease',
+            '💰 $200K+ cost savings delivered',
+            '✅ 19% improvement in On-Time Delivery',
+          ],
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Documentation.png',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Team Development',
-          description:
-            '👤 Trained 4 Junior ISO Auditors\
-            👥 Onboarded & mentored 3 junior staff\
-            📚 Managed ~20 QMS users during implementation\
-            🎓 Guided 25+ end users (M365)\
-            🌟 10+ years of experience\
-            👥 500+ training hours delivered\
-            📱 200+ training sessions conducted\
-            🌐 650+ employees supported (6 sites)\
-            💻 75+ DevOps sprints contributed',
+          title: 'Highlights | Team Development',
+          description: [
+            '👤 Trained 4 Junior ISO Auditors',
+            '👥 Onboarded & mentored 3 junior staff',
+            '📚 Managed ~20 QMS users during implementation',
+            '🎓 Guided 25+ end users (M365)',
+            '🌟 10+ years of experience',
+            '👥 500+ training hours delivered',
+            '📱 200+ training sessions conducted',
+            '🌐 650+ employees supported (6 sites)',
+            '💻 75+ DevOps sprints contributed',
+          ],
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Leadership.png',
           link: 'https://www.linkedin.com/in/katkeilty',

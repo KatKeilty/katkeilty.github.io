@@ -34,7 +34,7 @@ const CONFIG = {
           'Delivered significant savings with measurable improvements in delivery (+15%), profit (+22%), efficiency (+11%), and customer satisfaction (-88% complaints).',
        ],
         imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://www.svgrepo.com/show/415755/analytics-chart-diagram.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -43,7 +43,7 @@ const CONFIG = {
             'Delivered 500+ training hours across 200+ sessions, supporting management and employees across multiple sites. Trained ISO auditors and onboarded staff members. ',
         ],
         imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://www.svgrepo.com/show/415747/achievement-award-badge.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -52,7 +52,7 @@ const CONFIG = {
             'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
           ],
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Metrics.png',
+            'https://www.svgrepo.com/show/415759/chat-conversation-laptop.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -61,7 +61,7 @@ const CONFIG = {
             'Supported deployment of a new CRM system, resulting in rapid adoption and measurable business impact in first year.',
           ],
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/QMS.png',
+            'https://www.svgrepo.com/show/415749/email-inbox-letter.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -70,7 +70,7 @@ const CONFIG = {
             'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.',
           ],
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Audit.png',
+            'https://www.svgrepo.com/show/415741/rocket-spaceship-start.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -79,7 +79,7 @@ const CONFIG = {
             'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.',
           ],
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/ERP.png',
+            'https://www.svgrepo.com/show/415765/documents-storage-files.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
@@ -89,6 +89,7 @@ const CONFIG = {
     title: 'Portfolio of Kat Keilty',
     description:
       'With 10+ years transforming processes and empowering teams, I make technology work for people, not the other way around.',
+    imageURL: 'https://www.svgrepo.com/show/415752/favorite-heart-like.svg' },
     social: {
     linkedin: 'katkeilty',
     x: '',
@@ -198,14 +199,6 @@ const CONFIG = {
       to: '',
       description:
         'Database management, Data structures and algorithms, Programming, Systems analysis and design, Scientific research, Math and Statistics, Development, management, and optimization of IT systems across sectors.',
-    },
-    {
-      institution: 'Loyalist College',
-      degree: 'Diploma, Office Administration – Executive',
-      from: '2021',
-      to: '2023',
-      description:
-        'Financial accounting, business law, organizational behaviour, software, management',
     },
   ],
     publications: [

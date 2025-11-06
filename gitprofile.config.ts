@@ -2,13 +2,9 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'KatKeilty', // Your GitHub org/user name. (This is the only required config)
   },
-  /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-   */
+
   base: '/gitprofile/',
   projects: {
     github: {
@@ -25,37 +21,78 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
-      header: 'My Projects',
+      header: 'Highlights & Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
+          title: 'Highlights | Business Improvement',
+          description: [
+          'Delivered significant savings with measurable improvements in delivery (+15%), profit (+22%), efficiency (+11%), and customer satisfaction (-88% complaints).',
+       ],
+        imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
+          title: 'Highlights | Team Development',
+          description: [
+            'Delivered 500+ training hours across 200+ sessions, supporting management and employees across multiple sites. Trained ISO auditors and onboarded staff members. ',
+        ],
+        imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://www.linkedin.com/in/katkeilty',
+        },
+        {
+          title: 'Digital Transformation | Business Analyst',
+          description: [
+            'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
+          ],
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Metrics.png',
+          link: 'https://www.linkedin.com/in/katkeilty',
+        },
+        {
+          title: 'CRM Implementation | Subject Matter Expert',
+          description: [
+            'Supported deployment of a new CRM system, resulting in rapid adoption and measurable business impact in first year.',
+          ],
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/QMS.png',
+          link: 'https://www.linkedin.com/in/katkeilty',
+        },
+        {
+          title: 'QMS Implementation | Project Manager',
+          description: [
+            'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.',
+          ],
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/Audit.png',
+          link: 'https://www.linkedin.com/in/katkeilty',
+        },
+        {
+          title: 'M365 Platform Rollout | Super User',
+          description: [
+            'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.',
+          ],
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/d198146425b4680e8373ba088cb132fd7854b0fd/public/canvaCreations/icon/ERP.png',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
     },
   },
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
-  social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+  seo: {
+    title: 'Portfolio of Kat Keilty',
+    description:
+      'With 10+ years transforming processes and empowering teams, I make technology work for people, not the other way around.',
+    social: {
+    linkedin: 'katkeilty',
+    x: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
     instagram: '',
@@ -65,97 +102,126 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     discord: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: 'https://www.katkeilty.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'kat.keilty@outlook.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Business Intelligence',
+    'SQL',
+    'NetSuite',
+    'ETL',
+    'PowerBI',
+    'DAX',
+    'PowerQuery',
+    'VsCode',
+    'Azure DevOps',
     'Git',
-    'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'HTML',
+    'Solutions Development',
+    'M365',
+    'SharePoint',
+    'CRM',
+    'ERP',
+    'Agile',
+    'Waterfall',
+    'Process Improvement',
+    'QMS',
+    'ISO 9001/14001',
+    'PFMEA',
+    'Visio',
+    'LucidChart',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: ` Manage software implementation projects and build bilingual tools and resources. Lead ISO 9001/14001 audits while improving processes with data driven insights.`,
+      position: 'Prelco | Quality Specialist',
+      from: '2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.prelco.ca/en/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company:
+        'Manage standards, documentation, and QMS database for 45+ staff. Streamline communication through Power BI and Power Automate. Audit ISO 9001 compliance and onboard/train staff with focus on quality.',
+      position: 'Beclawat | Quality Auditor',
+      from: '2018',
+      to: '2022',
+      companyLink: 'https://beclawat.com/',
     },
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'ASQ | Certified Quality Process Analyst (CQPA)',
+      body: 'CQPA Body of Knowledge: Quality Concepts and Tools, Problem Solving and Improvement, Data Analysis, Customer-Supplier Relations, Corrective and Preventive Action (CAPA)',
+      year: '2025',
+      link: 'https://credentials.asq.org/7ab48487-1ba4-424b-b032-93d254a126ab#acc.mgu4ZKnL',
+    },
+    {
+      name: 'CSSB | Lean Six Sigma Black Belt (LSSBB)',
+      body: 'Six Sigma Body of Knowledge: Team leadership & dynamics, DMAIC model, Hypothesis testing, Design of Experiment',
+      year: '2025',
+      link: 'https://www.credential.net/59384ce5-82e8-40b2-b1b1-1b92e48698d7?username=katrinakeilty53897',
+    },
+    {
+      name: 'CFI | Business Intelligence & Data Analyst (BIDA)',
+      body: 'Advanced Excel, Power BI, Power Query, Power Pivot, SQL, Tableau, Python. Statistical analysis, business intelligence, data science principles.',
+      year: '2024',
+      link: 'http://credentials.corporatefinanceinstitute.com/bf3107b3-e933-4ed7-8d00-2c6e75e60f15#acc.rUYKB5ij',
+    },
+    {
+      name: 'BRC | ISO 9001:2015 & 14001:2015 Internal Auditor',
+      body: 'Internal Audits, ISO Standards, Interviewing, Process Improvement, Corrective and Preventive Action (CAPA)',
+      year: '2017, 2024',
+      link: 'https://www.credential.net/59384ce5-82e8-40b2-b1b1-1b92e48698d7?username=katrinakeilty53897',
+    },
+    {
+      name: 'BRC | Failure Modes and Effects Analysis AIAG & VDA FMEA Training',
+      body: 'Quality (ISO 9001), Automotive (IATF 16949), Manufacturing & Operations, Process Improvement',
+      year: '2023',
+      link: 'https://thebrc.ca/product/aiag-vda-fmea-1st-edition-2/',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Athabasca University',
+      degree: 'Bachelor of Science, Computing and Information Systems Major',
+      from: 'Currently Enrolled',
+      to: '',
+      description:
+        'Database management, Data structures and algorithms, Programming, Systems analysis and design, Scientific research, Math and Statistics, Development, management, and optimization of IT systems across sectors.',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Loyalist College',
+      degree: 'Diploma, Office Administration – Executive',
+      from: '2021',
+      to: '2023',
+      description:
+        'Financial accounting, business law, organizational behaviour, software, management',
     },
   ],
-  publications: [
+    publications: [
     {
-      title: 'Publication Title',
+      title: '',
       conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      authors: '',
+      link: '',
+      description: '',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    username: '', // to hide blog section, keep it empty
     limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
@@ -164,7 +230,7 @@ const CONFIG = {
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'night',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -172,12 +238,12 @@ const CONFIG = {
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: false,
+    respectPrefersColorScheme: true,
 
     // Display the ring in Profile picture
     displayAvatarRing: true,
 
-    // Available themes. To remove any theme, exclude from here.
+ // Available themes. To remove any theme, exclude from here.
     themes: [
       'light',
       'dark',

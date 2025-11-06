@@ -1,6 +1,6 @@
 // gitprofile.config.ts
 
-const CONFIG = {
+const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
   github: {
     username: 'KatKeilty', // Your GitHub org/user name. (This is the only required config)
   },

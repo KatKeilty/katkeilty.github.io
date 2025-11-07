@@ -1,6 +1,7 @@
 // gitprofile.config.ts
 
-const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
+const CONFIG = {
+  //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
   github: {
     username: 'KatKeilty', // Your GitHub org/user name. (This is the only required config)
   },
@@ -31,9 +32,9 @@ const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-
         {
           title: 'Highlights | Business Improvement',
           description: [
-          'Delivered significant savings with measurable improvements in delivery (+15%), profit (+22%), efficiency (+11%), and customer satisfaction (-88% complaints).',
-       ],
-        imageUrl:
+            'Delivered significant savings with measurable improvements in delivery (+15%), profit (+22%), efficiency (+11%), and customer satisfaction (-88% complaints).',
+          ],
+          imageUrl:
             'https://www.svgrepo.com/show/415755/analytics-chart-diagram.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
@@ -41,8 +42,8 @@ const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-
           title: 'Highlights | Team Development',
           description: [
             'Delivered 500+ training hours across 200+ sessions, supporting management and employees across multiple sites. Trained ISO auditors and onboarded staff members. ',
-        ],
-        imageUrl:
+          ],
+          imageUrl:
             'https://www.svgrepo.com/show/415747/achievement-award-badge.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
@@ -89,8 +90,9 @@ const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-
     title: 'Portfolio of Kat Keilty',
     description:
       'With 10+ years transforming processes and empowering teams, I make technology work for people, not the other way around.',
-    imageURL: 'https://www.svgrepo.com/show/415752/favorite-heart-like.svg' },
-    social: {
+    imageURL: 'https://www.svgrepo.com/show/415752/favorite-heart-like.svg',
+  },
+  social: {
     linkedin: 'katkeilty',
     x: '',
     mastodon: '',
@@ -201,7 +203,7 @@ const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-
         'Database management, Data structures and algorithms, Programming, Systems analysis and design, Scientific research, Math and Statistics, Development, management, and optimization of IT systems across sectors.',
     },
   ],
-    publications: [
+  publications: [
     {
       title: '',
       conferenceName: '',
@@ -236,7 +238,7 @@ const CONFIG = { //icons from https://www.svgrepo.com/collection/corporate-pale-
     // Display the ring in Profile picture
     displayAvatarRing: true,
 
- // Available themes. To remove any theme, exclude from here.
+    // Available themes. To remove any theme, exclude from here.
     themes: [
       'light',
       'dark',

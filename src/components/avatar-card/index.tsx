@@ -2,7 +2,6 @@ import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
 import { skeleton } from '../../utils';
 import LazyImage from '../lazy-image';
-import { useTranslation } from 'react-i18next';
 
 interface AvatarCardProps {
   profile: Profile | null;
@@ -25,7 +24,6 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   avatarRing,
   resumeFileUrl,
 }): React.JSX.Element => {
-  const { t } = useTranslation();
 
   return (
     <div className="card shadow-lg card-sm bg-base-100">
@@ -92,7 +90,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               download
               rel="noreferrer"
             >
-              {t('buttons.downloadResume')}
+              ('buttons.downloadResume')
             </a>
           ))}
       </div>

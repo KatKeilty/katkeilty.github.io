@@ -1,8 +1,6 @@
 import { RiGlobalLine } from 'react-icons/ri';
 import { skeleton } from '../../utils';
-import { MouseEvent } from 'react';
-
-const LANGUAGE_STORAGE_KEY = 'gitprofile-language';
+import { MouseEvent as ReactMouseEvent, useEffect } from 'react';
 
 interface LanguageConfig {
   code: string;
@@ -35,20 +33,37 @@ const LanguageChanger = ({
   setLanguage,
   loading,
 }: LanguageChangerProps) => {
+  // Detect system language on mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('gitprofile-language');
+
+    if (!savedLanguage) {
+      // No saved preference, detect system language
+      const systemLang = navigator.language.toLowerCase();
+      const detectedLang = systemLang.startsWith('fr') ? 'fr' : 'en';
+
+      localStorage.setItem('gitprofile-language', detectedLang);
+      setLanguage(detectedLang);
+      document.querySelector('html')?.setAttribute('lang', detectedLang);
+    }
+  }, [setLanguage]);
+
   const changeLanguage = (
-    e: MouseEvent<HTMLAnchorElement>,
+    e: ReactMouseEvent<HTMLAnchorElement>,
     selectedLanguage: string,
   ) => {
     e.preventDefault();
 
+    // Save language preference
+    localStorage.setItem('gitprofile-language', selectedLanguage);
+
+    // Update HTML lang attribute
     document.querySelector('html')?.setAttribute('lang', selectedLanguage);
 
-    typeof window !== 'undefined' &&
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
-
+    // Update local state
     setLanguage(selectedLanguage);
 
-    // Trigger reload to apply translations
+    // Reload page to load new config
     window.location.reload();
   };
 
@@ -66,7 +81,7 @@ const LanguageChanger = ({
                 className: 'mb-1',
               })
             ) : (
-              <span className="text-base-content opacity-70">{t('ui.language')}</span>
+              <span className="text-base-content opacity-70">Language</span>
             )}
           </h5>
           <span className="text-base-content/50 text-sm">

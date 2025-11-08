@@ -29,14 +29,15 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
+import { getConfig } from '../getConfig';
 
 /**
  * Renders the GitProfile component.
  *
- * @param {Object} config - the configuration object
  * @return {JSX.Element} the rendered GitProfile component
  */
-const GitProfile = ({ config }: { config: Config }) => {
+const GitProfile = () => {
+  const [config] = useState(getConfig());
   const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
     getSanitizedConfig(config),
   );

@@ -98,7 +98,7 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: '',
+    medium: 'KatKeilty',
     dev: '',
     stackoverflow: '',
     discord: '',
@@ -208,8 +208,8 @@ const CONFIG = {
     },
   ],
   blog: {
-    source: 'dev',
-    username: '',
+    source: 'medium',
+    username: 'KatKeilty',
     limit: 2,
   },
   googleAnalytics: {

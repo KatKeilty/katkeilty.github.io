@@ -219,7 +219,7 @@ const CONFIG = {
   themeConfig: {
     defaultTheme: 'night',
     disableSwitch: false,
-    respectPrefersColorScheme: true,
+    respectPrefersColorScheme: false,
     displayAvatarRing: true,
     themes: [
       'light',

@@ -26,14 +26,14 @@ interface LanguageChangerProps {
  * @param {string} props.language - The current language.
  * @param {function} props.setLanguage - A function to set the language.
  * @param {boolean} props.loading - Whether the component is in a loading state.
- * @return {JSX.Element} The rendered language changer component.
+ * @return {JSX.Element} The rendered language changer component
  */
 const LanguageChanger = ({
   language,
   setLanguage,
   loading,
 }: LanguageChangerProps) => {
-  // Detect system language on mount
+  // Detect system language on mount (if no saved preference)
   useEffect(() => {
     const savedLanguage = localStorage.getItem('gitprofile-language');
 
@@ -60,11 +60,8 @@ const LanguageChanger = ({
     // Update HTML lang attribute
     document.querySelector('html')?.setAttribute('lang', selectedLanguage);
 
-    // Update local state
+    // Notify parent to update language/config
     setLanguage(selectedLanguage);
-
-    // Reload page to load new config
-    window.location.reload();
   };
 
   const currentLanguage = LANGUAGES.find((lang) => lang.code === language);

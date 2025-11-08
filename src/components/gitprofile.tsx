@@ -34,11 +34,16 @@ import { getConfig } from '../getConfig';
 /**
  * Renders the GitProfile component.
  *
+ * This version uses per-language config files returned by getConfig()
+ * (which reads localStorage['gitprofile-language']). When `language`
+ * changes, the component reloads the config and re-sanitizes it so the
+ * whole site uses the selected language config.
+ *
  * @return {JSX.Element} the rendered GitProfile component
  */
 const GitProfile = () => {
-  const [config] = useState(getConfig());
-  const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
+  const [config, setConfig] = useState(getConfig());
+  const [sanitizedConfig, setSanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
     getSanitizedConfig(config as any),
   );
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
@@ -131,6 +136,12 @@ const GitProfile = () => {
     getGithubProjects,
   ]);
 
+  // react to config changes by re-sanitizing and reloading data
+  useEffect(() => {
+    setSanitizedConfig(getSanitizedConfig(config as any));
+  }, [config]);
+
+  // when sanitizedConfig changes, run initial setup & load data
   useEffect(() => {
     if (Object.keys(sanitizedConfig).length === 0) {
       setError(INVALID_CONFIG_ERROR);
@@ -146,11 +157,37 @@ const GitProfile = () => {
     theme && document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
+  // Ensure the initial language state reflects localStorage
   useEffect(() => {
     const savedLanguage = localStorage.getItem('gitprofile-language') || 'en';
     setLanguage(savedLanguage);
     document.documentElement.setAttribute('lang', savedLanguage);
   }, []);
+
+  // When `language` changes, re-load the appropriate config (getConfig reads localStorage)
+  useEffect(() => {
+    const newConfig = getConfig();
+    setConfig(newConfig);
+    // sanitizedConfig will be updated by the effect that watches `config`
+  }, [language]);
+
+  // Update runtime title/meta when the selected config (sanitizedConfig) changes
+  useEffect(() => {
+    const title = sanitizedConfig.seo?.title || '';
+    const description = sanitizedConfig.seo?.description || '';
+
+    if (title) document.title = title;
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description);
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      metaDesc.setAttribute('content', description);
+      document.head.appendChild(metaDesc);
+    }
+  }, [sanitizedConfig]);
 
   const handleError = (error: AxiosError | Error): void => {
     console.error('Error:', error);

@@ -1,12 +1,16 @@
 # katkeilty.github.io
 
-A personal portfolio site generated from the GitProfile template and customized for Kat Keilty.
+A personal portfolio site generated from the GitProfile template and customized for my professional portfolio. 
 
 Live: https://katkeilty.github.io
 
 ## About
 
 This repository contains the source and configuration for my personal portfolio site. It is built on the GitProfile template and customized with my projects, experience, and contact links. The site is a static Vite app and is published to GitHub Pages from this repository.
+
+## Attributions
+
+Inexperienced in web design, I was happy to discover GitProfile, which I forked to use as a template. With minimal exposure to web design previouisly, I used both Claude.ai by Anthropic and GitHubs Copilot agent to help me create my customizations. Icons for my Projects cards were found on https://www.svgrepo.com/collection/corporate-pale-color-vectors/
 
 ## Quick start (development)
 

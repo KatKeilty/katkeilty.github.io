@@ -1,3 +1,86 @@
+# katkeilty.github.io
+
+A personal portfolio site generated from the GitProfile template and customized for Kat Keilty.
+
+Live: https://katkeilty.github.io
+
+## About
+
+This repository contains the source and configuration for my personal portfolio site. It is built on the GitProfile template and customized with my projects, experience, and contact links. The site is a static Vite app and is published to GitHub Pages from this repository.
+
+## Quick start (development)
+
+1. Install dependencies
+
+  ```bash
+  npm install
+  ```
+
+2. Run dev server
+
+  ```bash
+  npm run dev
+  ```
+
+3. Open the site in your browser (default Vite port):
+
+  - http://localhost:5173/gitprofile/ (dev)
+
+4. Build for production
+
+  ```bash
+  npm run build
+  ```
+
+5. Preview the built site locally
+
+  ```bash
+  npm run preview
+  ```
+
+Alternatively you can serve the `dist` folder with a static server such as `serve`:
+
+```bash
+npx serve dist
+```
+
+## Configuration
+
+All site content and behavior is driven by `gitprofile.config.ts`. Edit that file to update your:
+
+- GitHub username and social links
+- Projects and external project cards
+- Experience, education, certifications
+- Theme and visual preferences
+- `base` path used for GitHub Pages deployment
+
+Important: if you host at `https://<USERNAME>.github.io` set `base` to `'/'`. If you host at `https://<USERNAME>.github.io/<REPO>/`, set `base` to `'/<REPO>/'`.
+
+## Deployment (GitHub Pages)
+
+This repo is configured to publish via GitHub Actions. To publish at `https://katkeilty.github.io`:
+
+1. Rename the repository to `katkeilty.github.io` (already done).
+2. Make sure `gitprofile.config.ts` has `base: '/'`.
+3. Push changes to the `main` branch and wait for the Actions workflow to finish.
+4. Check Settings → Pages to confirm the site source and domain.
+
+If you prefer a manual deploy, build locally and upload the contents of `dist` to your pages source.
+
+## Notes
+
+- Linting: this project uses ESLint + Prettier. Run `npm run lint` and `npm run lint:fix` to keep formatting consistent.
+- Type checking: `npx tsc --noEmit` runs a quick type check.
+
+## Attribution
+
+This site was built using the GitProfile template by Arif Szn: https://github.com/arifszn/gitprofile
+
+License: MIT — see the `LICENSE` file in this repository.
+
+---
+
+If you'd like wording changes or want me to add a screenshot, badges, or a short bio section, tell me how you want it and I will update the README and push the change.
 <br/>
 
 <p align="center">

@@ -14,6 +14,7 @@ import { SanitizedConfig } from '../interfaces/sanitized-config';
 import ErrorPage from './error-page';
 import { DEFAULT_THEMES } from '../constants/default-themes';
 import ThemeChanger from './theme-changer';
+import LanguageChanger from './language-changer';
 import { BG_COLOR } from '../constants';
 import AvatarCard from './avatar-card';
 import { Profile } from '../interfaces/profile';
@@ -28,18 +29,25 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
+import { getConfig } from '../getConfig';
 
 /**
  * Renders the GitProfile component.
  *
- * @param {Object} config - the configuration object
+ * This version uses per-language config files returned by getConfig()
+ * (which reads localStorage['gitprofile-language']). When `language`
+ * changes, the component reloads the config and re-sanitizes it so the
+ * whole site uses the selected language config.
+ *
  * @return {JSX.Element} the rendered GitProfile component
  */
-const GitProfile = ({ config }: { config: Config }) => {
-  const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
-    getSanitizedConfig(config),
-  );
+const GitProfile = () => {
+  const [config, setConfig] = useState(getConfig());
+  const [sanitizedConfig, setSanitizedConfig] = useState<
+    SanitizedConfig | Record<string, never>
+  >(getSanitizedConfig(config as Config));
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
+  const [language, setLanguage] = useState<string>('en');
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -128,6 +136,12 @@ const GitProfile = ({ config }: { config: Config }) => {
     getGithubProjects,
   ]);
 
+  // react to config changes by re-sanitizing and reloading data
+  useEffect(() => {
+    setSanitizedConfig(getSanitizedConfig(config as Config));
+  }, [config]);
+
+  // when sanitizedConfig changes, run initial setup & load data
   useEffect(() => {
     if (Object.keys(sanitizedConfig).length === 0) {
       setError(INVALID_CONFIG_ERROR);
@@ -142,6 +156,38 @@ const GitProfile = ({ config }: { config: Config }) => {
   useEffect(() => {
     theme && document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  // Ensure the initial language state reflects localStorage
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('gitprofile-language') || 'en';
+    setLanguage(savedLanguage);
+    document.documentElement.setAttribute('lang', savedLanguage);
+  }, []);
+
+  // When `language` changes, re-load the appropriate config (getConfig reads localStorage)
+  useEffect(() => {
+    const newConfig = getConfig();
+    setConfig(newConfig);
+    // sanitizedConfig will be updated by the effect that watches `config`
+  }, [language]);
+
+  // Update runtime title/meta when the selected config (sanitizedConfig) changes
+  useEffect(() => {
+    const title = sanitizedConfig.seo?.title || '';
+    const description = sanitizedConfig.seo?.description || '';
+
+    if (title) document.title = title;
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description);
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      metaDesc.setAttribute('content', description);
+      document.head.appendChild(metaDesc);
+    }
+  }, [sanitizedConfig]);
 
   const handleError = (error: AxiosError | Error): void => {
     console.error('Error:', error);
@@ -199,6 +245,11 @@ const GitProfile = ({ config }: { config: Config }) => {
                       themeConfig={sanitizedConfig.themeConfig}
                     />
                   )}
+                  <LanguageChanger
+                    language={language}
+                    setLanguage={setLanguage}
+                    loading={loading}
+                  />
                   <AvatarCard
                     profile={profile}
                     loading={loading}

@@ -89,7 +89,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               download
               rel="noreferrer"
             >
-              Professional Summary
+              Synopsis
             </a>
           ))}
       </div>

@@ -1,6 +1,7 @@
 // gitprofile.config.ts
 
 const CONFIG = {
+  //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
   github: {
     username: 'KatKeilty', // Your GitHub org/user name. (This is the only required config)
   },
@@ -240,15 +241,15 @@ const CONFIG = {
     themes: [
       'light',
       'dark',
-      //'cupcake',
-      //'bumblebee',
+      'cupcake',
+      'bumblebee',
       'emerald',
       'corporate',
       'synthwave',
       'retro',
       'cyberpunk',
-      //'valentine',
-      //'halloween',
+      'valentine',
+      'halloween',
       'garden',
       'forest',
       'aqua',

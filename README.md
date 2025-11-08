@@ -12,31 +12,31 @@ This repository contains the source and configuration for my personal portfolio 
 
 1. Install dependencies
 
-  ```bash
-  npm install
-  ```
+```bash
+npm install
+```
 
 2. Run dev server
 
-  ```bash
-  npm run dev
-  ```
+```bash
+npm run dev
+```
 
 3. Open the site in your browser (default Vite port):
 
-  - http://localhost:5173/gitprofile/ (dev)
+- http://localhost:5173/gitprofile/ (dev)
 
 4. Build for production
 
-  ```bash
-  npm run build
-  ```
+```bash
+npm run build
+```
 
 5. Preview the built site locally
 
-  ```bash
-  npm run preview
-  ```
+```bash
+npm run preview
+```
 
 Alternatively you can serve the `dist` folder with a static server such as `serve`:
 

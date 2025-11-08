@@ -14,6 +14,7 @@ import { SanitizedConfig } from '../interfaces/sanitized-config';
 import ErrorPage from './error-page';
 import { DEFAULT_THEMES } from '../constants/default-themes';
 import ThemeChanger from './theme-changer';
+import LanguageChanger from './language-changer';
 import { BG_COLOR } from '../constants';
 import AvatarCard from './avatar-card';
 import { Profile } from '../interfaces/profile';
@@ -40,6 +41,7 @@ const GitProfile = ({ config }: { config: Config }) => {
     getSanitizedConfig(config),
   );
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
+  const [language, setLanguage] = useState<string>('en');
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -143,6 +145,12 @@ const GitProfile = ({ config }: { config: Config }) => {
     theme && document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('gitprofile-language') || 'en';
+    setLanguage(savedLanguage);
+    document.documentElement.setAttribute('lang', savedLanguage);
+  }, []);
+
   const handleError = (error: AxiosError | Error): void => {
     console.error('Error:', error);
 
@@ -199,6 +207,11 @@ const GitProfile = ({ config }: { config: Config }) => {
                       themeConfig={sanitizedConfig.themeConfig}
                     />
                   )}
+                  <LanguageChanger
+                    language={language}
+                    setLanguage={setLanguage}
+                    loading={loading}
+                  />
                   <AvatarCard
                     profile={profile}
                     loading={loading}

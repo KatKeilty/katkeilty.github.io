@@ -1,8 +1,7 @@
 import { RiGlobalLine } from 'react-icons/ri';
 import { skeleton } from '../../utils';
-import { MouseEvent } from 'react';
-
-const LANGUAGE_STORAGE_KEY = 'gitprofile-language';
+import { MouseEvent as ReactMouseEvent, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface LanguageConfig {
   code: string;
@@ -35,21 +34,37 @@ const LanguageChanger = ({
   setLanguage,
   loading,
 }: LanguageChangerProps) => {
+  const { i18n } = useTranslation();
+
+  // Detect system language on mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('gitprofile-language');
+    
+    if (!savedLanguage) {
+      // No saved preference, detect system language
+      const systemLang = navigator.language.toLowerCase();
+      const detectedLang = systemLang.startsWith('fr') ? 'fr' : 'en';
+      
+      i18n.changeLanguage(detectedLang);
+      setLanguage(detectedLang);
+      document.querySelector('html')?.setAttribute('lang', detectedLang);
+    }
+  }, [i18n, setLanguage]);
+
   const changeLanguage = (
-    e: MouseEvent<HTMLAnchorElement>,
+    e: ReactMouseEvent<HTMLAnchorElement>,
     selectedLanguage: string,
   ) => {
     e.preventDefault();
 
+    // Change language in i18n (this handles localStorage automatically)
+    i18n.changeLanguage(selectedLanguage);
+    
+    // Update HTML lang attribute
     document.querySelector('html')?.setAttribute('lang', selectedLanguage);
 
-    typeof window !== 'undefined' &&
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
-
+    // Update local state
     setLanguage(selectedLanguage);
-
-    // Trigger reload to apply translations
-    window.location.reload();
   };
 
   const currentLanguage = LANGUAGES.find((lang) => lang.code === language);
@@ -101,7 +116,9 @@ const LanguageChanger = ({
                         onClick={(e) => changeLanguage(e, lang.code)}
                         className={`${language === lang.code ? 'active' : ''}`}
                       >
-                        <span className="opacity-60">{lang.nativeLabel}</span>
+                        <span className="opacity-60">
+                          {lang.nativeLabel}
+                        </span>
                       </a>
                     </li>
                   ))}

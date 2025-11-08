@@ -45,7 +45,7 @@ const GitProfile = () => {
   const [config, setConfig] = useState(getConfig());
   const [sanitizedConfig, setSanitizedConfig] = useState<
     SanitizedConfig | Record<string, never>
-  >(getSanitizedConfig(config as any));
+  >(getSanitizedConfig(config as Config));
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
   const [language, setLanguage] = useState<string>('en');
   const [error, setError] = useState<CustomError | null>(null);
@@ -138,7 +138,7 @@ const GitProfile = () => {
 
   // react to config changes by re-sanitizing and reloading data
   useEffect(() => {
-    setSanitizedConfig(getSanitizedConfig(config as any));
+    setSanitizedConfig(getSanitizedConfig(config as Config));
   }, [config]);
 
   // when sanitizedConfig changes, run initial setup & load data

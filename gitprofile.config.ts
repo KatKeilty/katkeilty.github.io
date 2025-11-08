@@ -285,7 +285,9 @@ const CONFIG = {
       rel="noreferrer"
     >GitProfile</a> and ❤️`,
 
-  enablePWA: true,
+  // Disable PWA for local preview to avoid service worker caching issues.
+  // Set to `true` for production deployments if you want PWA behavior.
+  enablePWA: false,
 };
 
 export default CONFIG;

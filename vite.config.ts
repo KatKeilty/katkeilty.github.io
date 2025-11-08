@@ -7,6 +7,25 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: CONFIG.base || '/',
+  // Increase chunk size warning and manually split vendor code to reduce large chunks
+  build: {
+    // Raise the warning limit to 1000 kB and split vendors into logical chunks
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react')) return 'vendor_react';
+            if (id.includes('date-fns')) return 'vendor_date-fns';
+            if (id.includes('axios')) return 'vendor_axios';
+            if (id.includes('react-icons')) return 'vendor_icons';
+            if (id.includes('daisyui') || id.includes('tailwindcss') || id.includes('postcss')) return 'vendor_ui';
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     createHtmlPlugin({

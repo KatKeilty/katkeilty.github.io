@@ -24,7 +24,6 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   avatarRing,
   resumeFileUrl,
 }): React.JSX.Element => {
-
   return (
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="grid place-items-center py-8">

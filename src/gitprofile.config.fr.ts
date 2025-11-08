@@ -210,7 +210,7 @@ const CONFIG = {
   blog: {
     source: 'medium',
     username: 'KatKeilty',
-    limit: 2,
+    limit: 4,
   },
   googleAnalytics: {
     id: '',

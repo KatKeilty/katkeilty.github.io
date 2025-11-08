@@ -34,7 +34,8 @@ const LanguageChanger = ({
   setLanguage,
   loading,
 }: LanguageChangerProps) => {
-  const { i18n } = useTranslation();
+  // include t so the title updates with language changes
+  const { t, i18n } = useTranslation();
 
   // Detect system language on mount
   useEffect(() => {
@@ -81,7 +82,7 @@ const LanguageChanger = ({
                 className: 'mb-1',
               })
             ) : (
-              <span className="text-base-content opacity-70">Language</span>
+              <span className="text-base-content opacity-70">{t('ui.language')}</span>
             )}
           </h5>
           <span className="text-base-content/50 text-sm">

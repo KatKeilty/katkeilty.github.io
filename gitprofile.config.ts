@@ -1,7 +1,6 @@
 // gitprofile.config.ts
 
 const CONFIG = {
-  //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
   github: {
     username: 'KatKeilty', // Your GitHub org/user name. (This is the only required config)
   },
@@ -232,7 +231,7 @@ const CONFIG = {
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: true,
+    respectPrefersColorScheme: false,
 
     // Display the ring in Profile picture
     displayAvatarRing: true,
@@ -241,15 +240,15 @@ const CONFIG = {
     themes: [
       'light',
       'dark',
-      'cupcake',
-      'bumblebee',
+      //'cupcake',
+      //'bumblebee',
       'emerald',
       'corporate',
       'synthwave',
       'retro',
       'cyberpunk',
-      'valentine',
-      'halloween',
+      //'valentine',
+      //'halloween',
       'garden',
       'forest',
       'aqua',

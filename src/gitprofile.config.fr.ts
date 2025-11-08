@@ -217,7 +217,7 @@ const CONFIG = {
   },
   hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
-    defaultTheme: 'night',
+    defaultTheme: 'synthwave',
     disableSwitch: false,
     respectPrefersColorScheme: false,
     displayAvatarRing: true,

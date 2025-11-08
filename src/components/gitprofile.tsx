@@ -39,7 +39,7 @@ import { getConfig } from '../getConfig';
 const GitProfile = () => {
   const [config] = useState(getConfig());
   const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
-    getSanitizedConfig(config),
+    getSanitizedConfig(config as any),
   );
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
   const [language, setLanguage] = useState<string>('en');

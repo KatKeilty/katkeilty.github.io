@@ -1,7 +1,8 @@
 import { RiGlobalLine } from 'react-icons/ri';
 import { skeleton } from '../../utils';
-import { MouseEvent as ReactMouseEvent, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { MouseEvent } from 'react';
+
+const LANGUAGE_STORAGE_KEY = 'gitprofile-language';
 
 interface LanguageConfig {
   code: string;
@@ -34,38 +35,21 @@ const LanguageChanger = ({
   setLanguage,
   loading,
 }: LanguageChangerProps) => {
-  // include t so the title updates with language changes
-  const { t, i18n } = useTranslation();
-
-  // Detect system language on mount
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('gitprofile-language');
-
-    if (!savedLanguage) {
-      // No saved preference, detect system language
-      const systemLang = navigator.language.toLowerCase();
-      const detectedLang = systemLang.startsWith('fr') ? 'fr' : 'en';
-
-      i18n.changeLanguage(detectedLang);
-      setLanguage(detectedLang);
-      document.querySelector('html')?.setAttribute('lang', detectedLang);
-    }
-  }, [i18n, setLanguage]);
-
   const changeLanguage = (
-    e: ReactMouseEvent<HTMLAnchorElement>,
+    e: MouseEvent<HTMLAnchorElement>,
     selectedLanguage: string,
   ) => {
     e.preventDefault();
 
-    // Change language in i18n (this handles localStorage automatically)
-    i18n.changeLanguage(selectedLanguage);
-
-    // Update HTML lang attribute
     document.querySelector('html')?.setAttribute('lang', selectedLanguage);
 
-    // Update local state
+    typeof window !== 'undefined' &&
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
+
     setLanguage(selectedLanguage);
+
+    // Trigger reload to apply translations
+    window.location.reload();
   };
 
   const currentLanguage = LANGUAGES.find((lang) => lang.code === language);

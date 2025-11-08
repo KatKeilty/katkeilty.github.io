@@ -19,7 +19,12 @@ export default defineConfig({
             if (id.includes('date-fns')) return 'vendor_date-fns';
             if (id.includes('axios')) return 'vendor_axios';
             if (id.includes('react-icons')) return 'vendor_icons';
-            if (id.includes('daisyui') || id.includes('tailwindcss') || id.includes('postcss')) return 'vendor_ui';
+            if (
+              id.includes('daisyui') ||
+              id.includes('tailwindcss') ||
+              id.includes('postcss')
+            )
+              return 'vendor_ui';
             return 'vendor';
           }
         },

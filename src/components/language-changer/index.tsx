@@ -39,12 +39,12 @@ const LanguageChanger = ({
   // Detect system language on mount
   useEffect(() => {
     const savedLanguage = localStorage.getItem('gitprofile-language');
-    
+
     if (!savedLanguage) {
       // No saved preference, detect system language
       const systemLang = navigator.language.toLowerCase();
       const detectedLang = systemLang.startsWith('fr') ? 'fr' : 'en';
-      
+
       i18n.changeLanguage(detectedLang);
       setLanguage(detectedLang);
       document.querySelector('html')?.setAttribute('lang', detectedLang);
@@ -59,7 +59,7 @@ const LanguageChanger = ({
 
     // Change language in i18n (this handles localStorage automatically)
     i18n.changeLanguage(selectedLanguage);
-    
+
     // Update HTML lang attribute
     document.querySelector('html')?.setAttribute('lang', selectedLanguage);
 
@@ -116,9 +116,7 @@ const LanguageChanger = ({
                         onClick={(e) => changeLanguage(e, lang.code)}
                         className={`${language === lang.code ? 'active' : ''}`}
                       >
-                        <span className="opacity-60">
-                          {lang.nativeLabel}
-                        </span>
+                        <span className="opacity-60">{lang.nativeLabel}</span>
                       </a>
                     </li>
                   ))}

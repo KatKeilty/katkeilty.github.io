@@ -64,12 +64,15 @@ const BlogCard = ({
     } else if (blog.source === 'forem') {
       // Fetch from Forem API with required headers
       // Note: Use 'per_page' parameter to get more results
-      fetch(`https://forem.com/api/articles?username=${blog.username}&per_page=10`, {
-        headers: {
-          'Accept': 'application/vnd.forem.api-v1+json',
-          'Content-Type': 'application/json',
+      fetch(
+        `https://forem.com/api/articles?username=${blog.username}&per_page=10`,
+        {
+          headers: {
+            Accept: 'application/vnd.forem.api-v1+json',
+            'Content-Type': 'application/json',
+          },
         },
-      })
+      )
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -136,6 +139,7 @@ const BlogCard = ({
           setArticles([]);
         });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blog.source, blog.username, blog.tags]);
 
   const renderSkeleton = () => {

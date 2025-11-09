@@ -29,10 +29,28 @@ const BlogCard = ({
       getDevPost({
         user: blog.username,
       }).then((res) => {
-        setArticles(res);
+        // Filter articles by tags if specified
+        let filteredArticles = res;
+
+        if (blog.tags) {
+          const tagsToFilter = Array.isArray(blog.tags)
+            ? blog.tags
+            : [blog.tags];
+
+          filteredArticles = res.filter((article: Article) =>
+            tagsToFilter.some((tag: string) =>
+              article.categories.some(
+                (category: string) =>
+                  category.toLowerCase() === tag.toLowerCase(),
+              ),
+            ),
+          );
+        }
+
+        setArticles(filteredArticles);
       });
     }
-  }, [blog.source, blog.username]);
+  }, [blog.source, blog.username, blog.tags]);
 
   const renderSkeleton = () => {
     const array = [];

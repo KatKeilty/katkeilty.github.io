@@ -105,8 +105,8 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'KatKeilty',
-    dev: '',
+    medium: '',
+    dev: 'katkeilty',
     stackoverflow: '', // example: '1/jeff-atwood'
     discord: '',
     telegram: '',
@@ -214,9 +214,10 @@ const CONFIG = {
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'medium', // medium | dev
-    username: 'KatKeilty', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    source: 'dev', // medium | dev
+    username: 'katkeilty', // to hide blog section, keep it empty
+    limit: 5, // How many articles to display. Max is 10.
+    tags: 'english',
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX

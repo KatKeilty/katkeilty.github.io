@@ -1,6 +1,7 @@
 // gitprofile.config.ts
 
 const CONFIG = {
+  //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
   github: {
     username: 'KatKeilty', // Your GitHub org/user name. (This is the only required config)
   },
@@ -105,7 +106,7 @@ const CONFIG = {
     dribbble: '',
     behance: '',
     medium: '',
-    dev: '',
+    dev: 'katkeilty',
     stackoverflow: '', // example: '1/jeff-atwood'
     discord: '',
     telegram: '',
@@ -214,8 +215,9 @@ const CONFIG = {
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: '', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    username: 'katkeilty', // to hide blog section, keep it empty
+    limit: 5, // How many articles to display. Max is 10.
+    tags: 'english',
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -240,15 +242,15 @@ const CONFIG = {
     themes: [
       'light',
       'dark',
-      //'cupcake',
-      //'bumblebee',
+      'cupcake',
+      'bumblebee',
       'emerald',
       'corporate',
       'synthwave',
       'retro',
       'cyberpunk',
-      //'valentine',
-      //'halloween',
+      'valentine',
+      'halloween',
       'garden',
       'forest',
       'aqua',

@@ -1,7 +1,6 @@
 // gitprofile.config.fr.ts
 
 const CONFIG = {
-  //icons from https://www.svgrepo.com/collection/corporate-pale-color-vectors/
   github: {
     username: 'KatKeilty',
   },
@@ -31,49 +30,42 @@ const CONFIG = {
           title: 'Faits saillants | Amélioration des affaires',
           description:
             'Réalisé des économies importantes avec des améliorations mesurables en livraison (+15%), profit (+22%), efficacité (+11%), et satisfaction client (-88% de plaintes).',
-          imageUrl:
-            'https://www.svgrepo.com/show/415755/analytics-chart-diagram.svg',
+          imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: "Faits saillants | Développement d'équipe",
           description:
             'Offert 500+ heures de formation sur 200+ sessions, soutenant la direction et les employés sur plusieurs sites. Formé des auditeurs ISO et intégré des membres du personnel.',
-          imageUrl:
-            'https://www.svgrepo.com/show/415747/achievement-award-badge.svg',
+          imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: "Transformation numérique | Analyste d'affaires",
           description:
             'Transformation numérique multi-sites à grande échelle, coordination avec des partenaires et consultants francophones. Implémentation de NetSuite ERP, Fabric et logiciels de soutien. Direction des efforts de coordination de processus interfonctionnels.',
-          imageUrl:
-            'https://www.svgrepo.com/show/415759/chat-conversation-laptop.svg',
+          imageUrl: '/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Implémentation CRM | Expert en la matière',
           description:
             "Soutenu le déploiement d'un nouveau système CRM, résultant en une adoption rapide et un impact commercial mesurable la première année.",
-          imageUrl:
-            'https://www.svgrepo.com/show/415749/email-inbox-letter.svg',
+          imageUrl: '/icons/email-inbox-letter-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Implémentation SGQ | Chef de projet',
           description:
             'Remplacé une base de données de gestion de la qualité vieillissante par un système moderne tout en maintenant la continuité des affaires et en réalisant des améliorations de qualité mesurables.',
-          imageUrl:
-            'https://www.svgrepo.com/show/415741/rocket-spaceship-start.svg',
+          imageUrl: '/icons/rocket-spaceship-start-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Déploiement de la plateforme M365 | Super utilisateur',
-          description: [
+          description:
             'Soutenu le déploiement bilingue de M365 sur plusieurs sites pour une adoption interculturelle et une utilisation efficace des nouveaux outils de collaboration.',
-          ],
-          imageUrl:
-            'https://www.svgrepo.com/show/415765/documents-storage-files.svg',
+          imageUrl: '/icons/documents-storage-files-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
@@ -83,7 +75,7 @@ const CONFIG = {
     title: 'Portfolio de Kat Keilty',
     description:
       "Avec plus de 10 ans à transformer les processus et à autonomiser les équipes, je fais en sorte que la technologie travaille pour les gens, et non l'inverse.",
-    imageURL: 'https://www.svgrepo.com/show/415752/favorite-heart-like.svg',
+    imageURL: '/icons/favorite-heart-like-svgrepo-com.svg',
   },
   social: {
     linkedin: 'katkeilty',
@@ -108,7 +100,7 @@ const CONFIG = {
     email: 'kat.keilty@outlook.com',
   },
   resume: {
-    fileUrl: 'https://katkeilty.com/ProfessionalSummaryPublic.pdf',
+    fileUrl: 'https://katkeilty.com/icons/ProfessionalSummaryPublicFR.pdf',
   },
   skills: [
     "Intelligence d'affaires",
@@ -208,8 +200,8 @@ const CONFIG = {
     },
   ],
   blog: {
-    source: 'dev',
-    username: 'KatKeilty',
+    source: 'forem',
+    username: 'katkeilty',
     limit: 4,
     tags: 'francais',
   },

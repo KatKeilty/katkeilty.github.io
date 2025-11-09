@@ -116,6 +116,7 @@ export const getSanitizedConfig = (
         username: config?.blog?.username || '',
         source: config?.blog?.source || 'dev',
         limit: config?.blog?.limit || 5,
+        tags: config?.blog?.tags,
         display: !!config?.blog?.username && !!config?.blog?.source,
       },
       themeConfig: {

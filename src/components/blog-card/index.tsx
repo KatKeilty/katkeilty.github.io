@@ -49,19 +49,35 @@ const BlogCard = ({
         setArticles(filteredArticles);
       });
     } else if (blog.source === 'forem') {
-      // Fetch from Forem API directly
-      fetch(`https://forem.com/api/articles?username=${blog.username}`)
-        .then((response) => response.json())
+      // Use AllOrigins CORS proxy to fetch from Forem
+      const foremUrl = encodeURIComponent(`https://forem.com/api/articles?username=${blog.username}`);
+      fetch(`https://api.allorigins.win/raw?url=${foremUrl}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
         .then((data) => {
-          // Transform Forem data to match Article interface
-          const foremArticles: Article[] = data.map((item: any) => ({
-            title: item.title,
-            description: item.description,
-            thumbnail: item.cover_image || item.social_image,
-            link: item.url,
-            categories: item.tag_list || [],
-            publishedAt: new Date(item.published_timestamp),
-          }));
+          console.log('=== FOREM FETCH DEBUG ===');
+          console.log('Raw Forem data:', data);
+          console.log('blog.tags from config:', blog.tags);
+          console.log('blog config:', blog);
+          
+          // Transform data to match Article interface
+          const foremArticles: Article[] = data.map((item: any) => {
+            console.log(`Article "${item.title}" has tags:`, item.tag_list);
+            return {
+              title: item.title,
+              description: item.description,
+              thumbnail: item.cover_image || item.social_image,
+              link: item.url,
+              categories: item.tag_list || [],
+              publishedAt: new Date(item.published_timestamp || item.published_at),
+            };
+          });
+
+          console.log('Transformed articles:', foremArticles);
 
           // Filter articles by tags if specified
           let filteredArticles = foremArticles;
@@ -71,13 +87,24 @@ const BlogCard = ({
               ? blog.tags 
               : [blog.tags];
             
-            filteredArticles = foremArticles.filter((article: Article) =>
-              tagsToFilter.some((tag: string) =>
-                article.categories.some((category: string) =>
-                  category.toLowerCase() === tag.toLowerCase()
-                )
-              )
-            );
+            console.log('Tags to filter by:', tagsToFilter);
+            
+            filteredArticles = foremArticles.filter((article: Article) => {
+              const matchFound = tagsToFilter.some((tag: string) => {
+                const hasTag = article.categories.some((category: string) => {
+                  const match = category.toLowerCase() === tag.toLowerCase();
+                  if (match) {
+                    console.log(`✓ Match found: "${category}" === "${tag}"`);
+                  }
+                  return match;
+                });
+                return hasTag;
+              });
+              console.log(`Article "${article.title}" ${matchFound ? 'INCLUDED' : 'EXCLUDED'}`);
+              return matchFound;
+            });
+            
+            console.log('Final filtered articles:', filteredArticles);
           }
           
           setArticles(filteredArticles);

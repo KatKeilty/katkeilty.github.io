@@ -35,7 +35,7 @@ const CONFIG = {
             'Delivered significant savings with measurable improvements in delivery (+15%), profit (+22%), efficiency (+11%), and customer satisfaction (-88% complaints).',
           ],
           imageUrl:
-            'https://www.svgrepo.com/show/415755/analytics-chart-diagram.svg',
+            'https://katkeilty.com/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -44,7 +44,7 @@ const CONFIG = {
             'Delivered 500+ training hours across 200+ sessions, supporting management and employees across multiple sites. Trained ISO auditors and onboarded staff members. ',
           ],
           imageUrl:
-            'https://www.svgrepo.com/show/415747/achievement-award-badge.svg',
+            'https://katkeilty.com/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -53,7 +53,7 @@ const CONFIG = {
             'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
           ],
           imageUrl:
-            'https://www.svgrepo.com/show/415759/chat-conversation-laptop.svg',
+            'https://katkeilty.com/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -62,7 +62,7 @@ const CONFIG = {
             'Supported deployment of a new CRM system, resulting in rapid adoption and measurable business impact in first year.',
           ],
           imageUrl:
-            'https://www.svgrepo.com/show/415749/email-inbox-letter.svg',
+            'https://katkeilty.com/icons/email-inbox-letter-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -71,7 +71,7 @@ const CONFIG = {
             'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.',
           ],
           imageUrl:
-            'https://www.svgrepo.com/show/415741/rocket-spaceship-start.svg',
+            'https://katkeilty.com/icons/rocket-spaceship-start-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -80,7 +80,7 @@ const CONFIG = {
             'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.',
           ],
           imageUrl:
-            'https://www.svgrepo.com/show/415765/documents-storage-files.svg',
+            'https://katkeilty.com/icons/documents-storage-files-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
@@ -90,7 +90,7 @@ const CONFIG = {
     title: 'Portfolio of Kat Keilty',
     description:
       'With 10+ years transforming processes and empowering teams, I make technology work for people, not the other way around.',
-    imageURL: 'https://www.svgrepo.com/show/415752/favorite-heart-like.svg',
+    imageURL: 'https://katkeilty.com/icons/favorite-heart-like-svgrepo-com.svg',
   },
   social: {
     linkedin: 'katkeilty',

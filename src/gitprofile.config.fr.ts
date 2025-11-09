@@ -62,8 +62,7 @@ const CONFIG = {
           title: 'Implémentation SGQ | Chef de projet',
           description:
             'Remplacé une base de données de gestion de la qualité vieillissante par un système moderne tout en maintenant la continuité des affaires et en réalisant des améliorations de qualité mesurables.',
-          imageUrl:
-            'https://katkeilty.com/icons/rocket-spaceship-start.svg',
+          imageUrl: 'https://katkeilty.com/icons/rocket-spaceship-start.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {

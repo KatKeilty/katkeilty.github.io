@@ -31,24 +31,61 @@ const BlogCard = ({
       }).then((res) => {
         // Filter articles by tags if specified
         let filteredArticles = res;
-
+        
         if (blog.tags) {
-          const tagsToFilter = Array.isArray(blog.tags)
-            ? blog.tags
+          const tagsToFilter = Array.isArray(blog.tags) 
+            ? blog.tags 
             : [blog.tags];
-
+          
           filteredArticles = res.filter((article: Article) =>
             tagsToFilter.some((tag: string) =>
-              article.categories.some(
-                (category: string) =>
-                  category.toLowerCase() === tag.toLowerCase(),
-              ),
-            ),
+              article.categories.some((category: string) =>
+                category.toLowerCase() === tag.toLowerCase()
+              )
+            )
           );
         }
-
+        
         setArticles(filteredArticles);
       });
+    } else if (blog.source === 'forem') {
+      // Fetch from Forem API directly
+      fetch(`https://forem.com/api/articles?username=${blog.username}`)
+        .then((response) => response.json())
+        .then((data) => {
+          // Transform Forem data to match Article interface
+          const foremArticles: Article[] = data.map((item: any) => ({
+            title: item.title,
+            description: item.description,
+            thumbnail: item.cover_image || item.social_image,
+            link: item.url,
+            categories: item.tag_list || [],
+            publishedAt: new Date(item.published_timestamp),
+          }));
+
+          // Filter articles by tags if specified
+          let filteredArticles = foremArticles;
+          
+          if (blog.tags) {
+            const tagsToFilter = Array.isArray(blog.tags) 
+              ? blog.tags 
+              : [blog.tags];
+            
+            filteredArticles = foremArticles.filter((article: Article) =>
+              tagsToFilter.some((tag: string) =>
+                article.categories.some((category: string) =>
+                  category.toLowerCase() === tag.toLowerCase()
+                )
+              )
+            );
+          }
+          
+          setArticles(filteredArticles);
+        })
+        .catch((error) => {
+          console.error('Error fetching Forem posts:', error);
+          setArticles([]);
+        });
     }
   }, [blog.source, blog.username, blog.tags]);
 

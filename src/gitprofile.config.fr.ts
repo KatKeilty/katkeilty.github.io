@@ -208,7 +208,7 @@ const CONFIG = {
     },
   ],
   blog: {
-    source: 'dev',
+    source: 'forem',
     username: 'KatKeilty',
     limit: 4,
     tags: 'francais',

@@ -31,7 +31,7 @@ const CONFIG = {
           description:
             'Réalisé des économies importantes avec des améliorations mesurables en livraison (+15%), profit (+22%), efficacité (+11%), et satisfaction client (-88% de plaintes).',
           imageUrl:
-            'https://katkeilty.com/icons/analytics-chart-diagram-svgrepo-com.svg',
+            '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -39,7 +39,7 @@ const CONFIG = {
           description:
             'Offert 500+ heures de formation sur 200+ sessions, soutenant la direction et les employés sur plusieurs sites. Formé des auditeurs ISO et intégré des membres du personnel.',
           imageUrl:
-            'https://katkeilty.com/icons/achievement-award-badge-svgrepo-com.svg',
+            '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -47,7 +47,7 @@ const CONFIG = {
           description:
             'Transformation numérique multi-sites à grande échelle, coordination avec des partenaires et consultants francophones. Implémentation de NetSuite ERP, Fabric et logiciels de soutien. Direction des efforts de coordination de processus interfonctionnels.',
           imageUrl:
-            'https://katkeilty.com/icons/chat-conversation-laptop-svgrepo-com.svg',
+            '/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -55,14 +55,14 @@ const CONFIG = {
           description:
             "Soutenu le déploiement d'un nouveau système CRM, résultant en une adoption rapide et un impact commercial mesurable la première année.",
           imageUrl:
-            'https://katkeilty.com/icons/email-inbox-letter-svgrepo-com.svg',
+            '/icons/email-inbox-letter-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Implémentation SGQ | Chef de projet',
           description:
             'Remplacé une base de données de gestion de la qualité vieillissante par un système moderne tout en maintenant la continuité des affaires et en réalisant des améliorations de qualité mesurables.',
-          imageUrl: 'https://katkeilty.com/icons/rocket-spaceship-start.svg',
+          imageUrl: '/icons/rocket-spaceship-start.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -71,7 +71,7 @@ const CONFIG = {
             'Soutenu le déploiement bilingue de M365 sur plusieurs sites pour une adoption interculturelle et une utilisation efficace des nouveaux outils de collaboration.',
           ],
           imageUrl:
-            'https://katkeilty.com/icons/documents-storage-files-svgrepo-com.svg',
+            '/icons/documents-storage-files-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
@@ -81,7 +81,7 @@ const CONFIG = {
     title: 'Portfolio de Kat Keilty',
     description:
       "Avec plus de 10 ans à transformer les processus et à autonomiser les équipes, je fais en sorte que la technologie travaille pour les gens, et non l'inverse.",
-    imageURL: 'https://katkeilty.com/icons/favorite-heart-like-svgrepo-com.svg',
+    imageURL: '/icons/favorite-heart-like-svgrepo-com.svg',
   },
   social: {
     linkedin: 'katkeilty',

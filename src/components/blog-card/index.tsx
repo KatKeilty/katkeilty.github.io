@@ -7,6 +7,18 @@ import { SanitizedBlog } from '../../interfaces/sanitized-config';
 import { ga, skeleton } from '../../utils';
 import { Article } from '../../interfaces/article';
 
+// Define proper type for Forem API response
+interface ForemArticleResponse {
+  title: string;
+  description: string;
+  cover_image?: string;
+  social_image?: string;
+  url: string;
+  tag_list: string[];
+  published_timestamp?: string;
+  published_at?: string;
+}
+
 const BlogCard = ({
   loading,
   blog,
@@ -49,6 +61,80 @@ const BlogCard = ({
 
         setArticles(filteredArticles);
       });
+    } else if (blog.source === 'forem') {
+      // Fetch from Forem API with required headers
+      // Note: Use 'per_page' parameter to get more results
+      fetch(`https://forem.com/api/articles?username=${blog.username}&per_page=10`, {
+        headers: {
+          'Accept': 'application/vnd.forem.api-v1+json',
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data: ForemArticleResponse[]) => {
+          console.log('=== FOREM FETCH DEBUG ===');
+          console.log('Raw Forem data:', data);
+          console.log('blog.tags from config:', blog.tags);
+          console.log('blog config:', blog);
+
+          // Transform data to match Article interface
+          const foremArticles: Article[] = data.map((item) => {
+            console.log(`Article "${item.title}" has tags:`, item.tag_list);
+            return {
+              title: item.title,
+              description: item.description,
+              thumbnail: item.cover_image || item.social_image || '',
+              link: item.url,
+              categories: item.tag_list || [],
+              publishedAt: new Date(
+                item.published_timestamp || item.published_at || '',
+              ),
+            };
+          });
+
+          console.log('Transformed articles:', foremArticles);
+
+          // Filter articles by tags if specified
+          let filteredArticles = foremArticles;
+
+          if (blog.tags) {
+            const tagsToFilter = Array.isArray(blog.tags)
+              ? blog.tags
+              : [blog.tags];
+
+            console.log('Tags to filter by:', tagsToFilter);
+
+            filteredArticles = foremArticles.filter((article: Article) => {
+              const matchFound = tagsToFilter.some((tag: string) => {
+                const hasTag = article.categories.some((category: string) => {
+                  const match = category.toLowerCase() === tag.toLowerCase();
+                  if (match) {
+                    console.log(`✓ Match found: "${category}" === "${tag}"`);
+                  }
+                  return match;
+                });
+                return hasTag;
+              });
+              console.log(
+                `Article "${article.title}" ${matchFound ? 'INCLUDED' : 'EXCLUDED'}`,
+              );
+              return matchFound;
+            });
+
+            console.log('Final filtered articles:', filteredArticles);
+          }
+
+          setArticles(filteredArticles);
+        })
+        .catch((error) => {
+          console.error('Error fetching Forem posts:', error);
+          setArticles([]);
+        });
     }
   }, [blog.source, blog.username, blog.tags]);
 

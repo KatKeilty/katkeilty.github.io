@@ -282,6 +282,7 @@ interface Blog {
    * Max is 10
    */
   limit?: number;
+  tags?: string;
 }
 
 interface ThemeConfig {

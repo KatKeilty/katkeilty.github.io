@@ -30,32 +30,28 @@ const CONFIG = {
           title: 'Faits saillants | Amélioration des affaires',
           description:
             'Réalisé des économies importantes avec des améliorations mesurables en livraison (+15%), profit (+22%), efficacité (+11%), et satisfaction client (-88% de plaintes).',
-          imageUrl:
-            '/icons/analytics-chart-diagram-svgrepo-com.svg',
+          imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: "Faits saillants | Développement d'équipe",
           description:
             'Offert 500+ heures de formation sur 200+ sessions, soutenant la direction et les employés sur plusieurs sites. Formé des auditeurs ISO et intégré des membres du personnel.',
-          imageUrl:
-            '/icons/achievement-award-badge-svgrepo-com.svg',
+          imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: "Transformation numérique | Analyste d'affaires",
           description:
             'Transformation numérique multi-sites à grande échelle, coordination avec des partenaires et consultants francophones. Implémentation de NetSuite ERP, Fabric et logiciels de soutien. Direction des efforts de coordination de processus interfonctionnels.',
-          imageUrl:
-            '/icons/chat-conversation-laptop-svgrepo-com.svg',
+          imageUrl: '/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Implémentation CRM | Expert en la matière',
           description:
             "Soutenu le déploiement d'un nouveau système CRM, résultant en une adoption rapide et un impact commercial mesurable la première année.",
-          imageUrl:
-            '/icons/email-inbox-letter-svgrepo-com.svg',
+          imageUrl: '/icons/email-inbox-letter-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -70,8 +66,7 @@ const CONFIG = {
           description: [
             'Soutenu le déploiement bilingue de M365 sur plusieurs sites pour une adoption interculturelle et une utilisation efficace des nouveaux outils de collaboration.',
           ],
-          imageUrl:
-            '/icons/documents-storage-files-svgrepo-com.svg',
+          imageUrl: '/icons/documents-storage-files-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],

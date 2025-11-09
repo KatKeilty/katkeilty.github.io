@@ -34,8 +34,7 @@ const CONFIG = {
           description: [
             'Delivered significant savings with measurable improvements in delivery (+15%), profit (+22%), efficiency (+11%), and customer satisfaction (-88% complaints).',
           ],
-          imageUrl:
-            '/icons/analytics-chart-diagram-svgrepo-com.svg',
+          imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -43,8 +42,7 @@ const CONFIG = {
           description: [
             'Delivered 500+ training hours across 200+ sessions, supporting management and employees across multiple sites. Trained ISO auditors and onboarded staff members. ',
           ],
-          imageUrl:
-            '/icons/achievement-award-badge-svgrepo-com.svg',
+          imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -52,8 +50,7 @@ const CONFIG = {
           description: [
             'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
           ],
-          imageUrl:
-            '/icons/chat-conversation-laptop-svgrepo-com.svg',
+          imageUrl: '/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -61,8 +58,7 @@ const CONFIG = {
           description: [
             'Supported deployment of a new CRM system, resulting in rapid adoption and measurable business impact in first year.',
           ],
-          imageUrl:
-            '/icons/email-inbox-letter-svgrepo-com.svg',
+          imageUrl: '/icons/email-inbox-letter-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -70,8 +66,7 @@ const CONFIG = {
           description: [
             'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.',
           ],
-          imageUrl:
-            '/icons/rocket-spaceship-start-svgrepo-com.svg',
+          imageUrl: '/icons/rocket-spaceship-start-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -79,8 +74,7 @@ const CONFIG = {
           description: [
             'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.',
           ],
-          imageUrl:
-            '/icons/documents-storage-files-svgrepo-com.svg',
+          imageUrl: '/icons/documents-storage-files-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],

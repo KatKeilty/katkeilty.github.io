@@ -100,7 +100,7 @@ const CONFIG = {
     email: 'kat.keilty@outlook.com',
   },
   resume: {
-    fileUrl: 'https://katkeilty.com/icons/ProfessionalSummaryPublicFR.pdf',
+    fileUrl: 'https://katkeilty.com/KatKeiltySynopsisFR.pdf',
   },
   skills: [
     "Intelligence d'affaires",

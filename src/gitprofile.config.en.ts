@@ -109,7 +109,7 @@ const CONFIG = {
     email: 'kat.keilty@outlook.com',
   },
   resume: {
-    fileUrl: 'https://katkeilty.com/ProfessionalSummaryPublic.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: 'https://katkeilty.com/KatKeiltySynopsisEN.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Business Intelligence',

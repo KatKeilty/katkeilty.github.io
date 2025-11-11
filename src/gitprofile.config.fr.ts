@@ -29,7 +29,7 @@ const CONFIG = {
         {
           title: 'Faits saillants | Amélioration des affaires',
           description:
-            'Réalisé des économies importantes avec des améliorations mesurables en livraison (+15%), profit (+22%), efficacité (+11%), et satisfaction client (-88% de plaintes).',
+            'Réalisé des économies importantes avec des améliorations mesurables en livraison, profit, efficacité , et satisfaction client.',
           imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },

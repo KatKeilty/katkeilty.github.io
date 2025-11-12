@@ -29,14 +29,14 @@ const CONFIG = {
         {
           title: 'Faits saillants | Amélioration des affaires',
           description:
-            'Réalisé des économies importantes avec des améliorations mesurables en livraison, profit, efficacité , et satisfaction client.',
+            'Réalisé des économies importantes avec des améliorations mesurables en livraison, profit, efficacité, et satisfaction client.',
           imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: "Faits saillants | Développement d'équipe",
           description:
-            'Offert 500+ heures de formation sur 200+ sessions, soutenant la direction et les employés sur plusieurs sites. Formé des auditeurs ISO et intégré des membres du personnel.',
+            'A dispensé des formations à la mise en œuvre sur plusieurs projets, en accompagnant la direction et les employés sur différents sites. A formé des auditeurs ISO et intégré de nouveaux collaborateurs.',
           imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
@@ -74,7 +74,7 @@ const CONFIG = {
   seo: {
     title: 'Portfolio de Kat Keilty',
     description:
-      "Avec plus de 10 ans à transformer les processus et à autonomiser les équipes, je fais en sorte que la technologie travaille pour les gens, et non l'inverse.",
+      "Transformer les processus et à autonomiser les équipes, je fais en sorte que la technologie travaille pour les gens, et non l'inverse.",
     imageURL: '/icons/favorite-heart-like-svgrepo-com.svg',
   },
   social: {
@@ -139,7 +139,7 @@ const CONFIG = {
     },
     {
       company:
-        'Gérer les normes, la documentation et la base de données SGQ pour 45+ employés. Rationaliser la communication via Power BI et Power Automate. Auditer la conformité ISO 9001 et intégrer/former le personnel avec un accent sur la qualité.',
+        'Gérer les normes, la documentation et la base de données SGQ. Rationaliser la communication via Power BI et Power Automate. Auditer la conformité ISO 9001. Intégration et formation des employés',
       position: 'Beclawat | Auditeur qualité',
       from: '2018',
       to: '2022',

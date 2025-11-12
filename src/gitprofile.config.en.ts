@@ -32,7 +32,7 @@ const CONFIG = {
         {
           title: 'Highlights | Business Improvement',
           description: [
-            'Delivered significant savings with measurable improvements in on time delivery , profit, efficiency , and customer satisfaction.',
+            'Delivered significant savings with measurable improvements in on time delivery, profit, efficiency, and customer satisfaction.',
           ],
           imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -40,7 +40,7 @@ const CONFIG = {
         {
           title: 'Highlights | Team Development',
           description: [
-            'Delivered 500+ training hours across 200+ sessions, supporting management and employees across multiple sites. Trained ISO auditors and onboarded staff members. ',
+            'Delivered implementation training across multiple projects, supporting management and employees across sites. Trained ISO auditors and onboarded staff members.',
           ],
           imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -83,7 +83,7 @@ const CONFIG = {
   seo: {
     title: 'Portfolio of Kat Keilty',
     description:
-      'With 10+ years transforming processes and empowering teams, I make technology work for people, not the other way around.',
+      'Transforming processes and empowering teams, I make technology work for people, not the other way around.',
     imageURL: '/icons/favorite-heart-like-svgrepo-com.svg',
   },
   social: {
@@ -139,7 +139,7 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: ` Manage software implementation projects and build bilingual tools and resources. Lead ISO 9001/14001 audits while improving processes with data driven insights.`,
+      company: `Manage software implementation projects and build bilingual tools and resources. Lead ISO 9001/14001 audits while improving processes with data driven insights.`,
       position: 'Prelco | Quality Specialist',
       from: '2022',
       to: 'Present',
@@ -147,7 +147,7 @@ const CONFIG = {
     },
     {
       company:
-        'Manage standards, documentation, and QMS database for 45+ staff. Streamline communication through Power BI and Power Automate. Audit ISO 9001 compliance and onboard/train staff with focus on quality.',
+        'Manage standards, documentation, and QMS. Streamline communication through Power BI and Power Automate. Audit ISO 9001 compliance. Employee onboarding and training.',
       position: 'Beclawat | Quality Auditor',
       from: '2018',
       to: '2022',

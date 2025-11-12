@@ -11,43 +11,34 @@
 
 @plugin "daisyui/theme" {
   name: 'procyon';
-  color-scheme: light;
-
-  --color-base-100: #e3e3ed;
-  --color-base-200: #d1d1db;
-  --color-base-300: #bfbfc9;
-  --color-base-content: #2a2730;
-  --color-primary: #fc055b;
-  --color-primary-content: #ffffff;
-  --color-secondary: #219aaf;
-  --color-secondary-content: #ffffff;
-  --color-accent: #e8d03a;
-  --color-accent-content: #2a2730;
-  --color-neutral: #2a2730;
-  --color-neutral-content: #ffffff;
-  --color-info: #219aaf;
-  --color-info-content: #ffffff;
-  --color-success: #16a34a;
-  --color-success-content: #ffffff;
-  --color-warning: #e8d03a;
-  --color-warning-content: #2a2730;
-  --color-error: #dc2626;
-  --color-error-content: #ffffff;
-
-  /* border radius */
-  --radius-selector: 3rem;
-  --radius-field: 3rem;
-  --radius-box: 3rem;
-
-  /* base sizes */
+  color-scheme: dark;
+  --color-base-100: #09002f;
+  --color-base-200: #120b3d;
+  --color-base-300: #1c184b;
+  --color-base-content: #a1b1ff;
+  --color-primary: #ff6700;
+  --color-primary-content: #1c184b;
+  --color-secondary: #71d1fe;
+  --color-secondary-content: #042e49;
+  --color-accent: #fdcf2b;
+  --color-accent-content: #162455;
+  --color-neutral: #422ad5;
+  --color-neutral-content: #c6d2ff;
+  --color-info: #00bafe;
+  --color-info-content: #042e49;
+  --color-success: #00d3bb;
+  --color-success-content: #002d2c;
+  --color-warning: #ffa1ad;
+  --color-warning-content: #1c184b;
+  --color-error: #ff6266;
+  --color-error-content: #201047;
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
-
-  /* border size */
-  --border: 1px;
-
-  /* effects */
-  --depth: 1;
+  --border: 2px;
+  --depth: 0;
   --noise: 0;
 }
 

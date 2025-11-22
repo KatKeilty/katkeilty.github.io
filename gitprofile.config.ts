@@ -30,23 +30,23 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Highlights | Business Improvement',
+          title: 'Business Improvement Results',
           description: [
-            'Delivered significant savings with measurable improvements in on time delivery , profit, efficiency , and customer satisfaction.',
+            'Delivered measurable improvements in on-time delivery, quality, efficiency, and customer satisfaction with significant cost savings.',
           ],
           imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Highlights | Team Development',
+          title: 'Team Development & Training',
           description: [
-            'Delivered implementation training across multiple projects, supporting management and employees across sites. Trained ISO auditors and onboarded staff members. ',
+            'Delivered implementation training across multiple projects, supporting management and employees across sites. Trained ISO auditors and onboarded staff members.',
           ],
           imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: 'Digital Transformation | Business Analyst',
+          title: 'Digital Transformation | DevOps Administrator/Business Analyst',
           description: [
             'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
           ],

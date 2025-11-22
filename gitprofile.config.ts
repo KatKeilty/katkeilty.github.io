@@ -47,7 +47,7 @@ const CONFIG = {
         },
         {
           title:
-            'Digital Transformation | DevOps Administrator/Business Analyst',
+            'Digital Transformation | DevOps Admin/Business Analyst',
           description: [
             'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
           ],

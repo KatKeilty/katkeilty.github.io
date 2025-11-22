@@ -27,14 +27,14 @@ const CONFIG = {
       header: 'Faits saillants et projets',
       projects: [
         {
-          title: 'Faits saillants | Amélioration des affaires',
+          title: 'Amélioration des affaires',
           description:
-            'Réalisé des économies importantes avec des améliorations mesurables en livraison, profit, efficacité, et satisfaction client.',
+            'Réalisé des économies importantes avec des améliorations mesurables en livraison, profit, qualité, efficacité, et satisfaction client.',
           imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title: "Faits saillants | Développement d'équipe",
+          title: "Développement et formation d'équipe",
           description:
             'A dispensé des formations à la mise en œuvre sur plusieurs projets, en accompagnant la direction et les employés sur différents sites. A formé des auditeurs ISO et intégré de nouveaux collaborateurs.',
           imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
@@ -43,7 +43,7 @@ const CONFIG = {
         {
           title: "Transformation numérique | Analyste d'affaires",
           description:
-            'Transformation numérique multi-sites à grande échelle, coordination avec des partenaires et consultants francophones. Implémentation de NetSuite ERP, Fabric et logiciels de soutien. Direction des efforts de coordination de processus interfonctionnels.',
+            "Administrateur DevOps et analyste d'affaires pour une transformation numérique à grande échelle, coordonnant avec des partenaires et consultants francophones.",
           imageUrl: '/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
@@ -131,7 +131,7 @@ const CONFIG = {
   experiences: [
     {
       company:
-        "Gérer des projets d'implémentation de logiciels et créer des outils et ressources bilingues. Diriger des audits ISO 9001/14001 tout en améliorant les processus avec des informations basées sur les données.",
+        "Dirigez des initiatives stratégiques de processus d'affaires et des projets de mise en œuvre, en consultant les équipes corporatives, les fournisseurs et les partenaires externes pour favoriser le changement. Réaliser des audits ISO 9001/14001 tout en améliorant les processus grâce à des analyses basées sur les données.",
       position: 'Prelco | Spécialiste qualité',
       from: '2022',
       to: 'Présent',
@@ -257,7 +257,7 @@ const CONFIG = {
       class="text-primary" href="https://github.com/arifszn/gitprofile"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> et ❤️`,
+    >GitProfile</a>, un traducteur, et ❤️`,
   enablePWA: true,
 };
 

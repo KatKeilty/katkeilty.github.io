@@ -47,9 +47,9 @@ const CONFIG = {
         },
         {
           title:
-            'Digital Transformation | DevOps Administrator/Business Analyst',
+            'Digital Transformation | Business Analyst',
           description: [
-            'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
+            'DevOps Administrator and Business Analyst for large-scale digital transformation, coordinating with francophone partners and consultants.',
           ],
           imageUrl: '/icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -65,7 +65,7 @@ const CONFIG = {
         {
           title: 'QMS Implementation | Project Manager',
           description: [
-            'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable quality improvements.',
+            'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable business improvements.',
           ],
           imageUrl: '/icons/rocket-spaceship-start-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
@@ -140,7 +140,7 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: `Manage software implementation projects and build bilingual tools and resources. Lead ISO 9001/14001 audits while improving processes with data driven insights.`,
+      company: `Lead strategic business process initiatives and implementation projects, consulting with corporate teams, suppliers, and external partners to drive change. Conduct ISO 9001/14001 audits while improving processes with data-driven insights.`,
       position: 'Prelco | Quality Specialist',
       from: '2022',
       to: 'Present',

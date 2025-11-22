@@ -78,7 +78,7 @@ const LanguageChanger = ({
                 className: 'mb-1',
               })
             ) : (
-              <span className="text-base-content opacity-70">'EN/FR'</span>
+              <span className="text-base-content opacity-70">EN/FR</span>
             )}
           </h5>
           <span className="text-base-content/50 text-sm">

@@ -32,7 +32,7 @@ const CONFIG = {
         {
           title: 'Highlights | Business Improvement',
           description: [
-            'Delivered significant savings with measurable improvements in on time delivery, profit, efficiency, and customer satisfaction.',
+            'Delivered measurable improvements in on-time delivery, quality, efficiency, and customer satisfaction with significant cost savings.',
           ],
           imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',

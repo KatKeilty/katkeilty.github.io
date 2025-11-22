@@ -46,8 +46,7 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title:
-            'Digital Transformation | Business Analyst',
+          title: 'Digital Transformation | Business Analyst',
           description: [
             'DevOps Administrator and Business Analyst for large-scale digital transformation, coordinating with francophone partners and consultants.',
           ],

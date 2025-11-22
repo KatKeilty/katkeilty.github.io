@@ -46,8 +46,7 @@ const CONFIG = {
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
-          title:
-            'Digital Transformation | DevOps Admin/Business Analyst',
+          title: 'Digital Transformation | DevOps Admin/Business Analyst',
           description: [
             'Large-scale multi-site digital transformation, coordinating with francophone partners and consultants. Implementation of NetSuite ERP, Fabric, and supporting softwares. Led cross-functional process coordination efforts.',
           ],

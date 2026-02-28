@@ -42,7 +42,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             <div
               className={`mb-8 rounded-full w-32 h-32 ${
                 avatarRing
-                  ? 'ring-3 ring-primary ring-offset-base-100 ring-offset-2'
+                  ? 'ring-2 ring-primary ring-offset-base-100 ring-offset-2'
                   : ''
               }`}
             >

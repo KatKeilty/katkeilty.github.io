@@ -27,17 +27,20 @@ This site is a static Vite app published to GitHub Pages, forked from the GitPro
 This repo is a fork of [arifszn/gitprofile](https://github.com/arifszn/gitprofile). To pull in updates from the original template while preserving your customizations:
 
 **1. Make sure upstream is set**
+
 ```bash
 git remote add upstream https://github.com/arifszn/gitprofile.git
 # skip if already added — verify with: git remote -v
 ```
 
 **2. Fetch upstream changes**
+
 ```bash
 git fetch upstream
 ```
 
 **3. Merge into your working branch**
+
 ```bash
 git checkout update
 git merge upstream/main
@@ -46,6 +49,7 @@ git merge upstream/main
 **4. Resolve any conflicts**
 
 Git will flag conflicted files. Open them and look for markers like:
+
 ```
 <<<<<<< HEAD
 your version
@@ -55,6 +59,7 @@ upstream version
 ```
 
 Edit to keep what you want, delete the markers, then:
+
 ```bash
 git add <filename>
 git commit
@@ -67,22 +72,27 @@ git commit
 ## Local Development
 
 **Install dependencies**
+
 ```bash
 npm install
 ```
 
 **Run dev server**
+
 ```bash
 npm run dev
 ```
+
 Open [http://localhost:5173/gitprofile/](http://localhost:5173/gitprofile/) in your browser.
 
 **Build for production**
+
 ```bash
 npm run build
 ```
 
 **Preview the production build**
+
 ```bash
 npm run preview
 # or serve the dist folder directly:
@@ -96,7 +106,12 @@ npx serve dist
 ```bash
 npm run lint        # check for lint issues
 npm run lint:fix    # auto-fix formatting
+npm run prettier # run the "prettier" package script
+npm run prettier:fix # run the "prettier:fix" package script
+
 npx tsc --noEmit    # type check
+npx prettier --write "./**/*.{js,jsx,ts,tsx,css,md,json}"
+
 ```
 
 ---

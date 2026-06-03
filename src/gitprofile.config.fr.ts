@@ -200,7 +200,7 @@ const CONFIG = {
     },
   ],
   blog: {
-    source: 'forem',
+    source: 'dev',
     username: 'katkeilty',
     limit: 4,
     tags: 'francais',

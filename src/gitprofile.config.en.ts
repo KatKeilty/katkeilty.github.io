@@ -34,7 +34,7 @@ const CONFIG = {
           description: [
             'Delivered measurable improvements in on-time delivery, quality, efficiency, and customer satisfaction with significant cost savings.',
           ],
-          imageUrl: '/icons/analytics-chart-diagram-svgrepo-com.svg',
+          imageUrl: './icons/analytics-chart-diagram-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -42,7 +42,7 @@ const CONFIG = {
           description: [
             'Delivered implementation training across multiple projects, supporting management and employees across sites. Trained ISO auditors and onboarded staff members.',
           ],
-          imageUrl: '/icons/achievement-award-badge-svgrepo-com.svg',
+          imageUrl: './icons/achievement-award-badge-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -50,7 +50,7 @@ const CONFIG = {
           description: [
             'DevOps Administrator and Business Analyst for large-scale digital transformation, coordinating with francophone partners and consultants.',
           ],
-          imageUrl: '/icons/chat-conversation-laptop-svgrepo-com.svg',
+          imageUrl: './icons/chat-conversation-laptop-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -58,7 +58,7 @@ const CONFIG = {
           description: [
             'Supported deployment of a new CRM system, resulting in rapid adoption and measurable business impact in first year.',
           ],
-          imageUrl: '/icons/email-inbox-letter-svgrepo-com.svg',
+          imageUrl: './icons/email-inbox-letter-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -66,7 +66,7 @@ const CONFIG = {
           description: [
             'Replaced aging quality management database with modern system while maintaining business continuity and driving measurable business improvements.',
           ],
-          imageUrl: '/icons/rocket-spaceship-start-svgrepo-com.svg',
+          imageUrl: './icons/rocket-spaceship-start-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
@@ -74,7 +74,7 @@ const CONFIG = {
           description: [
             'Supported bilingual M365 deployment across sites for cross-cultural adoption and effective use of new collaboration tools.',
           ],
-          imageUrl: '/icons/documents-storage-files-svgrepo-com.svg',
+          imageUrl: './icons/documents-storage-files-svgrepo-com.svg',
           link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
@@ -208,7 +208,7 @@ const CONFIG = {
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'forem', // medium | dev
+    source: 'dev', // medium | dev
     username: 'katkeilty', // to hide blog section, keep it empty
     limit: 5, // How many articles to display. Max is 10.
     tags: 'english',

@@ -7,18 +7,6 @@ import { SanitizedBlog } from '../../interfaces/sanitized-config';
 import { ga, skeleton } from '../../utils';
 import { Article } from '../../interfaces/article';
 
-// Define proper type for Forem API response
-interface ForemArticleResponse {
-  title: string;
-  description: string;
-  cover_image?: string;
-  social_image?: string;
-  url: string;
-  tag_list: string[];
-  published_timestamp?: string;
-  published_at?: string;
-}
-
 const BlogCard = ({
   loading,
   blog,
@@ -38,63 +26,12 @@ const BlogCard = ({
         setArticles(res);
       });
     } else if (blog.source === 'dev') {
-      // Fetch from dev.to API
-      fetch(
-        `https://dev.to/api/articles?username=${blog.username}&per_page=10`,
-        {
-          headers: {
-            Accept: 'application/vnd.forem.api-v1+json',
-            'Content-Type': 'application/json',
-          },
-        },
-      )
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((data: ForemArticleResponse[]) => {
-          // Transform data to match Article interface
-          const devArticles: Article[] = data.map((item) => {
-            return {
-              title: item.title,
-              description: item.description,
-              thumbnail: item.cover_image || item.social_image || '',
-              link: item.url,
-              categories: item.tag_list || [],
-              publishedAt: new Date(
-                item.published_timestamp || item.published_at || '',
-              ),
-            };
-          });
-
-          // Filter articles by tags if specified
-          let filteredArticles = devArticles;
-
-          if (blog.tags) {
-            const tagsToFilter = Array.isArray(blog.tags)
-              ? blog.tags
-              : [blog.tags];
-
-            filteredArticles = devArticles.filter((article: Article) =>
-              tagsToFilter.some((tag: string) =>
-                article.categories.some(
-                  (category: string) =>
-                    category.toLowerCase() === tag.toLowerCase(),
-                ),
-              ),
-            );
-          }
-
-          setArticles(filteredArticles);
-        })
-        .catch((error) => {
-          console.error('Error fetching dev.to posts:', error);
-          setArticles([]);
-        });
+      getDevPost({
+        user: blog.username,
+      }).then((res) => {
+        setArticles(res);
+      });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blog.source, blog.username]);
 
   const renderSkeleton = () => {

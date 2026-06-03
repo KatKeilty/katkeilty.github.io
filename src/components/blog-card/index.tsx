@@ -38,32 +38,7 @@ const BlogCard = ({
         setArticles(res);
       });
     } else if (blog.source === 'dev') {
-      getDevPost({
-        user: blog.username,
-      }).then((res) => {
-        // Filter articles by tags if specified
-        let filteredArticles = res;
-
-        if (blog.tags) {
-          const tagsToFilter = Array.isArray(blog.tags)
-            ? blog.tags
-            : [blog.tags];
-
-          filteredArticles = res.filter((article: Article) =>
-            tagsToFilter.some((tag: string) =>
-              article.categories.some(
-                (category: string) =>
-                  category.toLowerCase() === tag.toLowerCase(),
-              ),
-            ),
-          );
-        }
-
-        setArticles(filteredArticles);
-      });
-    } else if (blog.source === 'forem') {
-      // Fetch from Forem API with required headers
-      // Note: Use 'per_page' parameter to get more results
+      // Fetch from dev.to API
       fetch(
         `https://dev.to/api/articles?username=${blog.username}&per_page=10`,
         {
@@ -80,14 +55,8 @@ const BlogCard = ({
           return response.json();
         })
         .then((data: ForemArticleResponse[]) => {
-          console.log('=== FOREM FETCH DEBUG ===');
-          console.log('Raw Forem data:', data);
-          console.log('blog.tags from config:', blog.tags);
-          console.log('blog config:', blog);
-
           // Transform data to match Article interface
-          const foremArticles: Article[] = data.map((item) => {
-            console.log(`Article "${item.title}" has tags:`, item.tag_list);
+          const devArticles: Article[] = data.map((item) => {
             return {
               title: item.title,
               description: item.description,
@@ -100,47 +69,33 @@ const BlogCard = ({
             };
           });
 
-          console.log('Transformed articles:', foremArticles);
-
           // Filter articles by tags if specified
-          let filteredArticles = foremArticles;
+          let filteredArticles = devArticles;
 
           if (blog.tags) {
             const tagsToFilter = Array.isArray(blog.tags)
               ? blog.tags
               : [blog.tags];
 
-            console.log('Tags to filter by:', tagsToFilter);
-
-            filteredArticles = foremArticles.filter((article: Article) => {
-              const matchFound = tagsToFilter.some((tag: string) => {
-                const hasTag = article.categories.some((category: string) => {
-                  const match = category.toLowerCase() === tag.toLowerCase();
-                  if (match) {
-                    console.log(`✓ Match found: "${category}" === "${tag}"`);
-                  }
-                  return match;
-                });
-                return hasTag;
-              });
-              console.log(
-                `Article "${article.title}" ${matchFound ? 'INCLUDED' : 'EXCLUDED'}`,
-              );
-              return matchFound;
-            });
-
-            console.log('Final filtered articles:', filteredArticles);
+            filteredArticles = devArticles.filter((article: Article) =>
+              tagsToFilter.some((tag: string) =>
+                article.categories.some(
+                  (category: string) =>
+                    category.toLowerCase() === tag.toLowerCase(),
+                ),
+              ),
+            );
           }
 
           setArticles(filteredArticles);
         })
         .catch((error) => {
-          console.error('Error fetching Forem posts:', error);
+          console.error('Error fetching dev.to posts:', error);
           setArticles([]);
         });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [blog.source, blog.username, blog.tags]);
+  }, [blog.source, blog.username]);
 
   const renderSkeleton = () => {
     const array = [];

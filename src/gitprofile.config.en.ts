@@ -208,7 +208,7 @@ const CONFIG = {
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'forem', // medium | dev
+    source: 'forem', // medium | dev | forem (dev.to API)
     username: 'katkeilty', // to hide blog section, keep it empty
     limit: 5, // How many articles to display. Max is 10.
     tags: 'english',

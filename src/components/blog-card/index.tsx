@@ -65,7 +65,7 @@ const BlogCard = ({
       // Fetch from Forem API with required headers
       // Note: Use 'per_page' parameter to get more results
       fetch(
-        `https://open.forem.com/api/articles?username=${blog.username}&per_page=10`,
+        `https://dev.to/api/articles?username=${blog.username}&per_page=10`,
         {
           headers: {
             Accept: 'application/vnd.forem.api-v1+json',

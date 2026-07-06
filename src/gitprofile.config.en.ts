@@ -140,7 +140,7 @@ const CONFIG = {
   experiences: [
     {
       company: `Lead strategic business process initiatives and implementation projects, consulting with corporate teams, suppliers, and external partners to drive change. Conduct ISO 9001/14001 audits while improving processes with data-driven insights.`,
-      position: 'Prelco | Quality Specialist',
+      position: 'Prelco | Business Analyst | Quality Specialist',
       from: '2022',
       to: 'Present',
       companyLink: 'https://www.prelco.ca/en/',

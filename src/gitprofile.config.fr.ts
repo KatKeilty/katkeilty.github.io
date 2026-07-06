@@ -132,7 +132,7 @@ const CONFIG = {
     {
       company:
         "Dirigez des initiatives stratégiques de processus d'affaires et des projets de mise en œuvre, en consultant les équipes corporatives, les fournisseurs et les partenaires externes pour favoriser le changement. Réaliser des audits ISO 9001/14001 tout en améliorant les processus grâce à des analyses basées sur les données.",
-      position: 'Prelco | Spécialiste qualité',
+      position: "Prelco | Analyste d'affaires | Spécialiste qualité",
       from: '2022',
       to: 'Présent',
       companyLink: 'https://www.prelco.ca/fr/',

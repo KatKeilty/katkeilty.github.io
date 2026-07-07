@@ -119,6 +119,7 @@ const CONFIG = {
     'SharePoint',
     'CRM',
     'ERP',
+    'Kanban',
     'Agile',
     'Waterfall',
     'Amélioration des processus',

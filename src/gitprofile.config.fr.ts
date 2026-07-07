@@ -141,7 +141,7 @@ const CONFIG = {
       company:
         'Gérer les normes, la documentation et la base de données SGQ. Rationaliser la communication via Power BI et Power Automate. Auditer la conformité ISO 9001. Intégration et formation des employés',
       position: 'Beclawat | Auditeur qualité',
-      from: '2018',
+      from: '2016',
       to: '2022',
       companyLink: 'https://beclawat.com/',
     },

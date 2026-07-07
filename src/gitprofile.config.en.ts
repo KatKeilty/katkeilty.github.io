@@ -149,7 +149,7 @@ const CONFIG = {
       company:
         'Manage standards, documentation, and QMS. Streamline communication through Power BI and Power Automate. Audit ISO 9001 compliance. Employee onboarding and training.',
       position: 'Beclawat | Quality Auditor',
-      from: '2018',
+      from: '2016',
       to: '2022',
       companyLink: 'https://beclawat.com/',
     },

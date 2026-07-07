@@ -101,6 +101,37 @@ npx serve dist
 
 ---
 
+## Troubleshooting
+
+### Browser Tab Shows "Portfolio of Ariful Alam" Instead of Your Title
+
+**Issue:** On first load or in mobile previews, the browser tab and meta tags show the upstream template's default title instead of your custom SEO title.
+
+**Cause:** The built HTML file (`dist/index.html`) needs to be regenerated to inject your configuration.
+
+**Fix:** Rebuild the production bundle:
+
+```bash
+npm run build
+```
+
+Then hard refresh your browser to clear the cache:
+- **Chrome/Edge/Firefox:** `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
+- **Safari:** `Cmd+Option+E` to empty cache, then `Cmd+R`
+
+The title is configured in your SEO settings:
+
+```typescript
+// gitprofile.config.ts or gitprofile.config.en.ts
+seo: {
+  title: 'Your Custom Title Here',
+  description: 'Your description',
+  imageURL: '/your-image.svg',
+}
+```
+
+---
+
 ## Code Quality
 
 ```bash

@@ -154,7 +154,9 @@ const GitProfile = () => {
   }, [sanitizedConfig, loadData]);
 
   useEffect(() => {
-    theme && document.documentElement.setAttribute('data-theme', theme);
+    if (theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
   }, [theme]);
 
   // Ensure the initial language state reflects localStorage
@@ -215,7 +217,7 @@ const GitProfile = () => {
         } else {
           setError(GENERIC_ERROR);
         }
-      } catch (innerError) {
+      } catch {
         setError(GENERIC_ERROR);
       }
     } else {

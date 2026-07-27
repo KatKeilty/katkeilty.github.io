@@ -116,6 +116,7 @@ npm run build
 ```
 
 Then hard refresh your browser to clear the cache:
+
 - **Chrome/Edge/Firefox:** `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
 - **Safari:** `Cmd+Option+E` to empty cache, then `Cmd+R`
 

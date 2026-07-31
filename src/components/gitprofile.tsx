@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { formatDistance } from 'date-fns';
 import {
@@ -48,24 +48,21 @@ const GitProfile = () => {
 
     return localStorage.getItem('gitprofile-language') || 'en';
   });
-  const config = useMemo(() => getConfig(), [language]);
+  const config = useMemo(() => getConfig(language), [language]);
   const sanitizedConfig = useMemo<SanitizedConfig | Record<string, never>>(
     () => getSanitizedConfig(config as Config),
     [config],
   );
   const [theme, setTheme] = useState<string | null>(null);
-  const themeConfigSignature = `${sanitizedConfig.themeConfig.defaultTheme}|${sanitizedConfig.themeConfig.disableSwitch}|${sanitizedConfig.themeConfig.respectPrefersColorScheme}|${sanitizedConfig.themeConfig.themes.join(',')}`;
-  const previousThemeConfigSignatureRef = useRef<string | null>(null);
   const resolvedTheme = useMemo(() => {
     const initialTheme = getInitialTheme(sanitizedConfig.themeConfig);
 
-    if (previousThemeConfigSignatureRef.current !== themeConfigSignature) {
-      previousThemeConfigSignatureRef.current = themeConfigSignature;
-      return initialTheme;
+    if (theme !== null) {
+      return theme;
     }
 
-    return theme ?? initialTheme;
-  }, [sanitizedConfig.themeConfig, theme, themeConfigSignature]);
+    return initialTheme;
+  }, [sanitizedConfig.themeConfig, theme]);
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -197,6 +194,7 @@ const GitProfile = () => {
     }
 
     setupHotjar(sanitizedConfig.hotjar);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadData();
   }, [sanitizedConfig, loadData]);
 

@@ -194,7 +194,12 @@ const GitProfile = () => {
     }
 
     setupHotjar(sanitizedConfig.hotjar);
-    void loadData();
+
+    const load = async () => {
+      await loadData();
+    };
+
+    void load();
   }, [sanitizedConfig, loadData]);
 
   useEffect(() => {

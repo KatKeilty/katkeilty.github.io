@@ -15,16 +15,10 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react')) return 'vendor_react';
-            if (id.includes('date-fns')) return 'vendor_date-fns';
-            if (id.includes('axios')) return 'vendor_axios';
-            if (id.includes('react-icons')) return 'vendor_icons';
-            if (
-              id.includes('daisyui') ||
-              id.includes('tailwindcss') ||
-              id.includes('postcss')
-            )
-              return 'vendor_ui';
+            if (id.includes('date-fns')) {
+              return 'vendor_date-fns';
+            }
+
             return 'vendor';
           }
         },

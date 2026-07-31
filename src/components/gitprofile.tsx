@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { formatDistance } from 'date-fns';
 import {
@@ -12,7 +12,6 @@ import '../assets/index.css';
 import { getInitialTheme, getSanitizedConfig, setupHotjar } from '../utils';
 import { SanitizedConfig } from '../interfaces/sanitized-config';
 import ErrorPage from './error-page';
-import { DEFAULT_THEMES } from '../constants/default-themes';
 import ThemeChanger from './theme-changer';
 import LanguageChanger from './language-changer';
 import { BG_COLOR } from '../constants';
@@ -42,12 +41,28 @@ import { getConfig } from '../getConfig';
  * @return {JSX.Element} the rendered GitProfile component
  */
 const GitProfile = () => {
-  const [config, setConfig] = useState(getConfig());
-  const [sanitizedConfig, setSanitizedConfig] = useState<
-    SanitizedConfig | Record<string, never>
-  >(getSanitizedConfig(config as Config));
-  const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
-  const [language, setLanguage] = useState<string>('en');
+  const [language, setLanguage] = useState<string>(() => {
+    if (typeof window === 'undefined') {
+      return 'en';
+    }
+
+    return localStorage.getItem('gitprofile-language') || 'en';
+  });
+  const config = useMemo(() => getConfig(language), [language]);
+  const sanitizedConfig = useMemo<SanitizedConfig | Record<string, never>>(
+    () => getSanitizedConfig(config as Config),
+    [config],
+  );
+  const [theme, setTheme] = useState<string | null>(null);
+  const resolvedTheme = useMemo(() => {
+    const initialTheme = getInitialTheme(sanitizedConfig.themeConfig);
+
+    if (theme !== null) {
+      return theme;
+    }
+
+    return initialTheme;
+  }, [sanitizedConfig.themeConfig, theme]);
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -103,95 +118,7 @@ const GitProfile = () => {
     ],
   );
 
-  const loadData = useCallback(async () => {
-    try {
-      setLoading(true);
-
-      const response = await axios.get(
-        `https://api.github.com/users/${sanitizedConfig.github.username}`,
-      );
-      const data = response.data;
-
-      setProfile({
-        avatar: data.avatar_url,
-        name: data.name || ' ',
-        bio: data.bio || '',
-        location: data.location || '',
-        company: data.company || '',
-      });
-
-      if (!sanitizedConfig.projects.github.display) {
-        return;
-      }
-
-      setGithubProjects(await getGithubProjects(data.public_repos));
-    } catch (error) {
-      handleError(error as AxiosError | Error);
-    } finally {
-      setLoading(false);
-    }
-  }, [
-    sanitizedConfig.github.username,
-    sanitizedConfig.projects.github.display,
-    getGithubProjects,
-  ]);
-
-  // react to config changes by re-sanitizing and reloading data
-  useEffect(() => {
-    setSanitizedConfig(getSanitizedConfig(config as Config));
-  }, [config]);
-
-  // when sanitizedConfig changes, run initial setup & load data
-  useEffect(() => {
-    if (Object.keys(sanitizedConfig).length === 0) {
-      setError(INVALID_CONFIG_ERROR);
-    } else {
-      setError(null);
-      setTheme(getInitialTheme(sanitizedConfig.themeConfig));
-      setupHotjar(sanitizedConfig.hotjar);
-      loadData();
-    }
-  }, [sanitizedConfig, loadData]);
-
-  useEffect(() => {
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-  }, [theme]);
-
-  // Ensure the initial language state reflects localStorage
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('gitprofile-language') || 'en';
-    setLanguage(savedLanguage);
-    document.documentElement.setAttribute('lang', savedLanguage);
-  }, []);
-
-  // When `language` changes, re-load the appropriate config (getConfig reads localStorage)
-  useEffect(() => {
-    const newConfig = getConfig();
-    setConfig(newConfig);
-    // sanitizedConfig will be updated by the effect that watches `config`
-  }, [language]);
-
-  // Update runtime title/meta when the selected config (sanitizedConfig) changes
-  useEffect(() => {
-    const title = sanitizedConfig.seo?.title || '';
-    const description = sanitizedConfig.seo?.description || '';
-
-    if (title) document.title = title;
-
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', description);
-    } else {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      metaDesc.setAttribute('content', description);
-      document.head.appendChild(metaDesc);
-    }
-  }, [sanitizedConfig]);
-
-  const handleError = (error: AxiosError | Error): void => {
+  const handleError = useCallback((error: AxiosError | Error): void => {
     console.error('Error:', error);
 
     if (error instanceof AxiosError) {
@@ -223,15 +150,95 @@ const GitProfile = () => {
     } else {
       setError(GENERIC_ERROR);
     }
-  };
+  }, []);
+
+  const loadData = useCallback(async () => {
+    try {
+      setError(null);
+      setLoading(true);
+
+      const response = await axios.get(
+        `https://api.github.com/users/${sanitizedConfig.github.username}`,
+      );
+      const data = response.data;
+
+      setProfile({
+        avatar: data.avatar_url,
+        name: data.name || ' ',
+        bio: data.bio || '',
+        location: data.location || '',
+        company: data.company || '',
+      });
+
+      if (!sanitizedConfig.projects.github.display) {
+        return;
+      }
+
+      setGithubProjects(await getGithubProjects(data.public_repos));
+    } catch (error) {
+      handleError(error as AxiosError | Error);
+    } finally {
+      setLoading(false);
+    }
+  }, [
+    sanitizedConfig.github.username,
+    sanitizedConfig.projects.github.display,
+    getGithubProjects,
+    handleError,
+  ]);
+
+  // when sanitizedConfig changes, run initial setup & load data
+  useEffect(() => {
+    if (Object.keys(sanitizedConfig).length === 0) {
+      return;
+    }
+
+    setupHotjar(sanitizedConfig.hotjar);
+
+    const load = async () => {
+      await loadData();
+    };
+
+    void load();
+  }, [sanitizedConfig, loadData]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', resolvedTheme);
+  }, [resolvedTheme]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', language);
+  }, [language]);
+
+  // Update runtime title/meta when the selected config (sanitizedConfig) changes
+  useEffect(() => {
+    const title = sanitizedConfig.seo?.title || '';
+    const description = sanitizedConfig.seo?.description || '';
+
+    if (title) document.title = title;
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description);
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      metaDesc.setAttribute('content', description);
+      document.head.appendChild(metaDesc);
+    }
+  }, [sanitizedConfig]);
+
+  const renderedError =
+    error ??
+    (Object.keys(sanitizedConfig).length === 0 ? INVALID_CONFIG_ERROR : null);
 
   return (
     <div className="fade-in h-screen">
-      {error ? (
+      {renderedError ? (
         <ErrorPage
-          status={error.status}
-          title={error.title}
-          subTitle={error.subTitle}
+          status={renderedError.status}
+          title={renderedError.title}
+          subTitle={renderedError.subTitle}
         />
       ) : (
         <>
@@ -241,7 +248,7 @@ const GitProfile = () => {
                 <div className="grid grid-cols-1 gap-6">
                   {!sanitizedConfig.themeConfig.disableSwitch && (
                     <ThemeChanger
-                      theme={theme}
+                      theme={resolvedTheme}
                       setTheme={setTheme}
                       loading={loading}
                       themeConfig={sanitizedConfig.themeConfig}

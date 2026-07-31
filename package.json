@@ -5,6 +5,9 @@
   "type": "module",
   "license": "MIT",
   "author": "arifszn",
+  "engines": {
+    "node": ">=20"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/arifszn/gitprofile.git"

@@ -194,7 +194,6 @@ const GitProfile = () => {
     }
 
     setupHotjar(sanitizedConfig.hotjar);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadData();
   }, [sanitizedConfig, loadData]);
 

@@ -31,28 +31,48 @@ import PublicationCard from './publication-card';
 import { getConfig } from '../getConfig';
 
 /**
- * Renders the GitProfile component.
+ * Formats the GitHub rate limit reset time for display.
  *
- * This version uses per-language config files returned by getConfig()
- * (which reads localStorage['gitprofile-language']). When `language`
- * changes, the component reloads the config and re-sanitizes it so the
- * whole site uses the selected language config.
- *
- * @return {JSX.Element} the rendered GitProfile component
+ * @param {AxiosError} error - the axios error carrying the response headers
+ * @return {string | null} humanized reset time, or null when unavailable
  */
-const GitProfile = () => {
-  const [language, setLanguage] = useState<string>(() => {
-    if (typeof window === 'undefined') {
-      return 'en';
-    }
+const formatRateLimitReset = (error: AxiosError): string | null => {
+  const rawReset = error.response?.headers?.['x-ratelimit-reset'];
 
-    return localStorage.getItem('gitprofile-language') || 'en';
-  });
-  const config = useMemo(() => getConfig(language), [language]);
-  const sanitizedConfig = useMemo<SanitizedConfig | Record<string, never>>(
-    () => getSanitizedConfig(config as Config),
-    [config],
-  );
+  if (rawReset === undefined || rawReset === null || rawReset === '') {
+    return null;
+  }
+
+  const resetTimestamp = Number(rawReset);
+
+  if (!Number.isFinite(resetTimestamp)) {
+    return null;
+  }
+
+  const resetDate = new Date(resetTimestamp * 1000);
+
+  if (!Number.isFinite(resetDate.getTime())) {
+    return null;
+  }
+
+  return formatDistance(resetDate, new Date(), { addSuffix: true });
+};
+
+/**
+ * Renders the profile once the config is known to be valid.
+ *
+ * @param {Object} props - the rendered profile configuration and language
+ * @return {JSX.Element} the rendered profile
+ */
+const GitProfileContent = ({
+  language,
+  setLanguage,
+  sanitizedConfig,
+}: {
+  language: string;
+  setLanguage: (language: string) => void;
+  sanitizedConfig: SanitizedConfig;
+}) => {
   const [theme, setTheme] = useState<string | null>(null);
   const resolvedTheme = useMemo(() => {
     const initialTheme = getInitialTheme(sanitizedConfig.themeConfig);
@@ -121,34 +141,21 @@ const GitProfile = () => {
   const handleError = useCallback((error: AxiosError | Error): void => {
     console.error('Error:', error);
 
-    if (error instanceof AxiosError) {
-      try {
-        const reset = formatDistance(
-          new Date(error.response?.headers?.['x-ratelimit-reset'] * 1000),
-          new Date(),
-          { addSuffix: true },
-        );
-
-        if (typeof error.response?.status === 'number') {
-          switch (error.response.status) {
-            case 403:
-              setError(setTooManyRequestError(reset));
-              break;
-            case 404:
-              setError(INVALID_GITHUB_USERNAME_ERROR);
-              break;
-            default:
-              setError(GENERIC_ERROR);
-              break;
-          }
-        } else {
-          setError(GENERIC_ERROR);
-        }
-      } catch {
-        setError(GENERIC_ERROR);
-      }
-    } else {
+    if (!(error instanceof AxiosError)) {
       setError(GENERIC_ERROR);
+      return;
+    }
+
+    switch (error.response?.status) {
+      case 403:
+        setError(setTooManyRequestError(formatRateLimitReset(error)));
+        break;
+      case 404:
+        setError(INVALID_GITHUB_USERNAME_ERROR);
+        break;
+      default:
+        setError(GENERIC_ERROR);
+        break;
     }
   }, []);
 
@@ -194,12 +201,10 @@ const GitProfile = () => {
     }
 
     setupHotjar(sanitizedConfig.hotjar);
-
-    const load = async () => {
-      await loadData();
-    };
-
-    void load();
+    // Data fetching updates state asynchronously; keeping it in this effect
+    // preserves the config-change request lifecycle.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    void loadData();
   }, [sanitizedConfig, loadData]);
 
   useEffect(() => {
@@ -349,5 +354,53 @@ const GitProfile = () => {
     </div>
   );
 };
+
+/**
+ * Renders the GitProfile component with the selected language configuration.
+ *
+ * @return {JSX.Element} the rendered GitProfile component
+ */
+const GitProfile = () => {
+  const [language, setLanguage] = useState<string>(() => {
+    if (typeof window === 'undefined') {
+      return 'en';
+    }
+
+    return localStorage.getItem('gitprofile-language') || 'en';
+  });
+  const config = useMemo(() => getConfig(language), [language]);
+  const sanitizedConfig = useMemo<SanitizedConfig | Record<string, never>>(
+    () => getSanitizedConfig(config as Config),
+    [config],
+  );
+
+  if (!isValidConfig(sanitizedConfig)) {
+    return (
+      <ErrorPage
+        status={INVALID_CONFIG_ERROR.status}
+        title={INVALID_CONFIG_ERROR.title}
+        subTitle={INVALID_CONFIG_ERROR.subTitle}
+      />
+    );
+  }
+
+  return (
+    <GitProfileContent
+      language={language}
+      setLanguage={setLanguage}
+      sanitizedConfig={sanitizedConfig}
+    />
+  );
+};
+
+/**
+ * Narrows a sanitized config to its populated form.
+ *
+ * @param {Object} config - the result of getSanitizedConfig
+ * @return {boolean} whether the config is populated
+ */
+const isValidConfig = (
+  config: SanitizedConfig | Record<string, never>,
+): config is SanitizedConfig => Object.keys(config).length !== 0;
 
 export default GitProfile;

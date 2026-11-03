@@ -138,12 +138,11 @@ seo: {
 ```bash
 npm run lint        # check for lint issues
 npm run lint:fix    # auto-fix formatting
-npm run prettier # run the "prettier" package script
+npm run prettier    # run the "prettier" package script
 npm run prettier:fix # run the "prettier:fix" package script
 
 npx tsc --noEmit    # type check
 npx prettier --write "./**/*.{js,jsx,ts,tsx,css,md,json}"
-
 ```
 
 ---
